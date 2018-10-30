@@ -94,17 +94,7 @@ production : [https://seclists.org/oss-sec/2016/q1/363](https://seclists.org/oss
 *The Art of Debugging: with GDB, DDD and Eclipse*, Matloff and Salzman, No
 Starch Press.
 
-## Ch 7, File I/O Part I - The Essentials : Further Reading
-
-- 'File locking in Linux' - a tutorial : https://gavv.github.io/blog/file-locks/
-- An article describing the stdbuf(1) utility: buffering in standard
-streams: [http://www.pixelbeat.org/programming/stdio_buffering/](http://www.pixelbeat.org/programming/stdio_buffering/)
-- 'Using setvbuf() with STDIN stream' : https://stackoverflow.com/questions/5876373/using-setvbuf-with-stdin-stream
-- The popen(3) man page : http://man7.org/linux/man-pages/man3/popen.3.html
-- 'Systemd Essentials: Working with Services, Units, and the Journal', 
-DigitalOcean: https://www.digitalocean.com/community/tutorials/systemd-essentials-working-with-services-units-and-the-journal
-
-## Ch 8, Process Credentials and Ch 9, Process Capabilities : Further Reading
+## Ch 7, Process Credentials and Ch 8, Process Capabilities : Further Reading
 
 - InfoSec:
 	- 'Security problems are just bugs', Linus Torvalds, LKML, 17 Nov
@@ -120,7 +110,7 @@ exploitation' : https://github.com/xairy/linux-kernel-exploitation
 looks like', The Register : http://www.theregister.co.uk/2016/05/09/allwinners_allloser_custom_kernel_has_a_nasty_root_backdoor/
 - Linux proc filesystem (CentOS) : https://www.centos.org/docs/5/html/Deployment_Guide-en-US/ch-proc.html
 
-## Ch 10, Process Execution and Ch 11, Process Creation : Further Reading
+## Ch 9, Process Execution and Ch 10, Process Creation : Further Reading
 - 'File locking in Linux' - a tutorial : https://gavv.github.io/blog/file-locks/
 
 *Books*
@@ -129,21 +119,21 @@ looks like', The Register : http://www.theregister.co.uk/2016/05/09/allwinners_a
 Threads*, Robbins and Robbins
 - Secure Programming for Linux and Unix HOWTO*, David Wheeler : https://www.tldp.org/HOWTO/pdf/Secure-Programs-HOWTO.pdf
 
-## Ch 12, Signaling - Part I : Further Reading
+## Ch 11, Signaling - Part I : Further Reading
 
 - Glibc feature test macros, M Kerrisk, LWN, March, 2014 : https://lwn.net/Articles/590381/
 - CPU ABI (Application Binary Interface) documentation, blog article : 
 'APPLICATION BINARY INTERFACE (ABI) DOCS AND THEIR
 MEANING' : https://kaiwantech.wordpress.com/2018/05/07/application-binary-interface-abi-docs-and-their-meaning/
 
-## Ch 13, Signaling - Part II : Further Reading
+## Ch 12, Signaling - Part II : Further Reading
 
 - Process Groups and related information : https://www.win.tue.nl/~aeb/linux/lk/lk-10.html
 - Tracing with LTTng
 	- The LTTng Documentation : https://lttng.org/docs/v2.10/
 	- Trace Compass GUI : https://www.eclipse.org/tracecompass/
 
-## Ch 14, Timers : Further Reading
+## Ch 13, Timers : Further Reading
 - 'Hrtimers and Beyond: Transforming the Linux Time Subsystems', Thomas
 Gleixner and Douglas Niehaus (2006). This is an old but interesting
 paper on the new timers and HRT implementation on 2.6 Linux : https://www.landley.net/kdocs/ols/2006/ols2006v1-pages-333-346.pdf
@@ -156,7 +146,7 @@ interfaces: https://www.unix.com/man-page/all/3LIB/librt/
 - Blog article: 'Using the Watchdog Timer in Linux' : https://www.jann.cc/2013/02/02/linux_watchdog.html
 
 
-## Ch 15, Multithreading Part I - Essentials : Further Reading
+## Ch 14, Multithreading Part I - Essentials : Further Reading
 
 - Perf
 	- 'Linux Profiling at Netflix', Brendan Gregg : https://www.slideshare.net/brendangregg/scale2015-linux-perfprofiling
@@ -171,7 +161,7 @@ interfaces: https://www.unix.com/man-page/all/3LIB/librt/
 	- Book: *The Art of Debugging with GDB, DDD, and Eclipse*,
 Matloff and Salzman.
 
-## Ch 16, Multithreading Part II - Synchronization : Further Reading
+## Ch 15, Multithreading Part II - Synchronization : Further Reading
 
 - 'Why Not to Share a Mutable State [Comic]',
 Dzone: https://dzone.com/articles/why-not-to-share-a-mutable-state-comic?fromrel=true
@@ -196,7 +186,7 @@ https://www.kernel.org/doc/Documentation/robust-futexes.txt
 	- More recently (May 2015), with respect to the NASA Curiosity Rover: *13 engineering truths proved by NASA's Curiosity Rover*, EDN :  https://www.edn.com/electronics-blogs/now-hear-this/4439386/13-engineering-truths-proved-by-NASA-s-CuriosityRover?mc=NL_EDN_EDT_EDN_funfriday_20150508&cid=NL_EDN_EDT_EDN_funfriday_20150508&elq=75871e4437784010b51f12e4c3be00a2&elqCampaignId=22919&elqaid=25798&elqat=1&elqTrackId=8e848e14bf3e41b58e660c804b335b07
 - 'Helgrind: a thread error detector' : http://valgrind.org/docs/manual/hg-manual.html
 
-## Ch 17, Multithreading Part III : Further Reading
+## Ch 16, Multithreading Part III : Further Reading
 
 - Stack Overflow Q&A— *Threadsafe vs re-entrant* : https://stackoverflow.com/questions/856823/threadsafe-vs-re-entrant
 - Blog article: 'PTHREADS DEV – COMMON PROGRAMMING MISTAKES TO AVOID' : https://kaiwantech.wordpress.com/2018/09/21/pthreads-devcommon-programming-mistakes-to-avoid/
@@ -215,7 +205,7 @@ documentation on threads (scroll down to the section on *Cancellation Points*
 	-  *Programming with POSIX Threads*, David R. Butenhof
 	- *Multithreaded Programming with Pthreads*, Bil Lewis and Daniel J. Berg.
 
-## Ch 18, CPU Scheduling : Further Reading
+## Ch 17, CPU Scheduling : Further Reading
 
 - *VDC Survey on real-time response* : The Embedded Muse, 341, 03 Jan 2018, Jack Ganssle: http://www.ganssle.com/tem/tem341.html#article3
 - Blog article: 'Algorithm time complexity and big O notation' : https://medium.com/@StueyGK/algorithm-time-complexity-and-big-o-notation-51502e612b4d
@@ -228,7 +218,7 @@ Steiner
 	- *Intro to Real-Time Linux for Embedded Developers* : interview with Steven Rostedt: https://www.linuxfoundation.org/blog/2013/03/intro-to-real-time-linux-for-embedded-developers/
 
 
-## Ch 19, File I/O Part II - More Advanced Aspects : Further Reading
+## Ch 18, Advanced File I/O : Further Reading
 
 - A collection of useful CLI (command line interface) wrapper utilities
 called *linux-ftools* is available on github here : https://github.com/david415/linux-ftools. It provides the fincore(1) (that's to be read as "f-in-core"), fadvise(1) and fallocate(1) utilities; do check out their GitHub README and try them out
@@ -255,19 +245,7 @@ codebase:
 	- Linux iosnoop Latency Heat Maps : http://www.brendangregg.com/blog/2014-07-23/linux-iosnoop-latency-heat-maps.html
 - Blog article: 'Using cgroups to limit I/O' : https://andrestc.com/post/cgroups-io/
 
-## Ch 20, Daemon Processes : Further Reading
-
-- The man page on daemon(7) is extremely detailed and guides the app
-developer on how exactly to create both the "old-style" traditional and the modern "new-style" daemon process; look it up here : https://www.freedesktop.org/software/systemd/man/daemon.html
-- Systemd
-	- Article, DigitalOcean: 'Systemd Essentials: Working with Services,
-Units, and the Journal' : https://www.digitalocean.com/community/tutorials/systemd-essentials-working-with-services-units-and-the-journal
-	- Article, DigitalOcean: 'Understanding Systemd Units and Unit Files' :  https://www.digitalocean.com/community/tutorials/understanding-systemd-units-and-unit-files
-	- Systemd Documentation : http://0pointer.de/blog/projects/systemd-docs.html
-	- Systemd FAQs : https://www.freedesktop.org/wiki/Software/systemd/FrequentlyAskedQuestions/
-- *Debug a daemon process* with Valgrind-GDB (vgdb) debugging. Look up this chapter of Valgrind's manual: *Using and understanding the Valgrind core: Advanced Topics* : http://valgrind.org/docs/manual/manual-core-adv.html
-
-## Ch 21, Troubleshooting and Best Practices : Further Reading
+## Ch 19, Troubleshooting and Best Practices : Further Reading
 
 - Perf
 	- *Linux Performance page*, Brendan Gregg : http://www.brendangregg.com/linuxperf.html
@@ -298,5 +276,28 @@ Units, and the Journal' : https://www.digitalocean.com/community/tutorials/syste
 - *The Practice of Programming*, Kerninghan & Pike
 - *Programming Pearls*, Jon Bentley
 - *The Art of UNIX Programming*, E.S. Raymond
+
+
+## A: File I/O Essentials : Further Reading
+
+- 'File locking in Linux' - a tutorial : https://gavv.github.io/blog/file-locks/
+- An article describing the stdbuf(1) utility: buffering in standard
+streams: [http://www.pixelbeat.org/programming/stdio_buffering/](http://www.pixelbeat.org/programming/stdio_buffering/)
+- 'Using setvbuf() with STDIN stream' : https://stackoverflow.com/questions/5876373/using-setvbuf-with-stdin-stream
+- The popen(3) man page : http://man7.org/linux/man-pages/man3/popen.3.html
+- 'Systemd Essentials: Working with Services, Units, and the Journal', 
+DigitalOcean: https://www.digitalocean.com/community/tutorials/systemd-essentials-working-with-services-units-and-the-journal
+
+## B: Daemon Processes : Further Reading
+
+- The man page on daemon(7) is extremely detailed and guides the app
+developer on how exactly to create both the "old-style" traditional and the modern "new-style" daemon process; look it up here : https://www.freedesktop.org/software/systemd/man/daemon.html
+- Systemd
+	- Article, DigitalOcean: 'Systemd Essentials: Working with Services,
+Units, and the Journal' : https://www.digitalocean.com/community/tutorials/systemd-essentials-working-with-services-units-and-the-journal
+	- Article, DigitalOcean: 'Understanding Systemd Units and Unit Files' :  https://www.digitalocean.com/community/tutorials/understanding-systemd-units-and-unit-files
+	- Systemd Documentation : http://0pointer.de/blog/projects/systemd-docs.html
+	- Systemd FAQs : https://www.freedesktop.org/wiki/Software/systemd/FrequentlyAskedQuestions/
+- *Debug a daemon process* with Valgrind-GDB (vgdb) debugging. Look up this chapter of Valgrind's manual: *Using and understanding the Valgrind core: Advanced Topics* : http://valgrind.org/docs/manual/manual-core-adv.html
 
 [End of Doc]
