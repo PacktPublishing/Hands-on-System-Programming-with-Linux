@@ -14,18 +14,18 @@ The repo contains the following:
 
 - ***solutions\_to\_assgn/ch'n'*** : a directory, which will contain selected solutions to assignments prescribed in the book. The solutions are organized by chapter,  each chapter (that requires this) will have a directory within which you can find selected solutions. The 'solutions' are mostly in the form of code (along with the associated Makefile, if required); on occasion, the   assignment is a "question type" and the answer can be found in a text file  named as *ch'n'\_solutions.txt* .
 
-- ***Hardware\_Software\_List.pdf*** : details on the hardware and software requirements for getting the best experience with working with the book's codebase.
+- ***Hardware\_Software\_List.pdf*** : details on the hardware and software requirements for getting the best experience with working with the book's codebase [*[download link](https://github.com/PacktPublishing/Hands-on-System-Programming-with-Linux/blob/master/Hardware_Software_List.pdf)*].
 
 - the ***Further\_reading.md*** file : details, in a chapter-wise manner,
   useful online references as well as books; these will benefit the reader
-  in learning more.
+  in learning more [*[download link](https://github.com/PacktPublishing/Hands-on-System-Programming-with-Linux/blob/master/Further_reading.md)*].
 
 
 We definitely encourage the reader to clone (and try out the code!) like so:
 
     git clone https://github.com/PacktPublishing/Hands-on-System-Programming-with-Linux
 
-Once cloned, we suggest you first browse through the *Software\_Hardware\_List* file; it details the hardware and software requirements for getting the best experience with working with the book's codebase. It mentions which packages are required, which are optional, and, wherever possible, how to install it.
+Once cloned, we suggest you first browse through the *Hardware\_Software\_List.pdf* file; it details the hardware and software requirements for getting the best experience with working with the book's codebase. It mentions which packages are required, which are optional, and, wherever possible, how to install it.
 
 Next, we suggest you proceed to build and try out the code examples.
 Also, a lot can be learned by working on the prescribed assignments for each chapter.
