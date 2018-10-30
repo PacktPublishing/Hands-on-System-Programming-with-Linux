@@ -1,0 +1,42 @@
+# .gitignore
+*.o
+*~
+.*.swp
+vgcore*
+*/bkp/*
+bkp/*
+older/*
+unused/
+
+# Executables: generate by:
+# find . -executable -type f >> .gitignore
+
+./ch2/rlimit_primes_dbg
+./ch2/mem_app1buggy_dbg
+./ch2/rlimits_show
+./ch2/rlimit_primes
+./ch2/mem_app1buggy
+./ch2/rlimits_show_dbg
+./ch2/vgrun
+./everloop
+./ch3/membugs_dbg
+./ch3/show_curbrk
+./ch3/membugs_dbg_asan
+./ch3/membugs
+./ch3/malloc_brk_test_dbg
+./ch3/show_curbrk_dbg
+./ch3/malloc_brk_test
+./ch3/vgrun
+./ch3/membugs_dbg_ub
+./.git/hooks/pre-commit.sample
+./.git/hooks/post-update.sample
+./.git/hooks/commit-msg.sample
+./.git/hooks/pre-rebase.sample
+./.git/hooks/pre-receive.sample
+./.git/hooks/applypatch-msg.sample
+./.git/hooks/pre-applypatch.sample
+./.git/hooks/pre-push.sample
+./.git/hooks/update.sample
+./.git/hooks/prepare-commit-msg.sample
+./ch1/getreg_rcx
+./genmk.sh

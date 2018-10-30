@@ -1,0 +1,92 @@
+Ch 1 : Linux System Architecture :: Assignment Solutions
+---------------------------------------------------------
+
+The solutions to selected questions for this chapter is given below.
+The question is reproduced for convenience, and the answer or solution
+is immediately below.
+
+Note: The assignments and solutions have been tried and tested on:
+ x86_64 : Fedora 27, Ubuntu 17.10.
+
+---------------------------------------------------------
+Q1. On the CLI, the shell, use pipes to:
+
+Display the number of files under the /boot directory
+Solution:
+ls -l /boot | wc -l
+Sort the files in /boot in ascending order by size
+---------------------------------------------------------
+Solution:
+---------------------------------------------------------
+ls -l /boot | sort -k5n
+-k : key column to sort on; the 5th column is the file size in bytes
+-n : perform a numeric sort (else, by default, it will perform an alphabetic sort)
+---------------------------------------------------------
+
+Q2. Are the following APIs library or system calls?
+---------------------------------------------------------
+Solution:
+---------------------------------------------------------
+malloc() :  library
+socket() : system call
+atoll()  : library
+How does one find out? Look up the man page for that API and see the section
+number - the number within brackets after the name of the API at the top and
+bottom of the man page(s). Eg. malloc(3).
+Number 3 => library API
+Number 2 => system call API.
+
+---------------------------------------------------------
+Q3. Sue wants to read the manual page on the stat() system call. The command
+she should issue on the shell is?
+---------------------------------------------------------
+Solution:
+---------------------------------------------------------
+man 2 stat
+This invokes man to lookup the stat keyword in Section 2 of the manual, which
+of course, is system calls.
+
+---------------------------------------------------------
+Q4. Ramesh wants to see the assembly and machine language code of his
+'hello, world' C program. Can you suggest two tools with which he could do so,
+and (very briefly) how
+---------------------------------------------------------
+Solution:
+---------------------------------------------------------
+1) With objdump :  
+objdump --source <binary-executable-pathname>
+
+2) With GDB :
+
+$ gdb -q <binary-executable-pathname>
+[...]
+(gdb) disassemble main
+<the assembly code shows up here>
+
+---------------------------------------------------------
+Q5. <Program code, find it in the dir solutions_to_assgn/ch1/getreg_cr2.c
+---------------------------------------------------------
+
+Q6. Anita writes a hello, world C program, compiles and runs it. Does the
+binary executable issue library or system calls or both? Name them.
+---------------------------------------------------------
+Solution:
+---------------------------------------------------------
+Both.
+(a) printf(3) which is a library (glibc) API
+(b) printf(3) internally invokes the write(2) system call
+
+---------------------------------------------------------
+Q7. A timer chip on the system motherboard encounters a timeout. The timeout
+code in the Operating System now runs... which execution context is it
+running in?
+---------------------------------------------------------
+Solution:
+---------------------------------------------------------
+Logically, the only code that can react"when the timer chip times out is an
+interrupt handler or ISR - Interrupt Service Routine. The ISR will be part of
+the Linux OS; as it's handling the timer interrupt, it of course is executing
+in Interrupt Context.
+---------------------------------------------------------
+
+<End of File>
