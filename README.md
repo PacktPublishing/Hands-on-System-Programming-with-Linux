@@ -14,9 +14,9 @@ The repo contains the following:
 
 - ***solutions\_to\_assgn/ch'n'*** : a directory, which will contain selected solutions to assignments prescribed in the book. The solutions are organized by chapter,  each chapter (that requires this) will have a directory within which you can find selected solutions. The 'solutions' are mostly in the form of code (along with the associated Makefile, if required); on occasion, the   assignment is a "question type" and the answer can be found in a text file  named as *ch'n'\_solutions.txt* .
 
-- ***Software\_Hardware\_List*** : details on the hardware and software requirements   for getting the best experience with working with the book's codebase.
+- ***Hardware\_Software\_List.pdf*** : details on the hardware and software requirements for getting the best experience with working with the book's codebase.
 
-- the ***Further\_reading.txt*** text file : details, in a chapter-wise manner,
+- the ***Further\_reading.md*** file : details, in a chapter-wise manner,
   useful online references as well as books; these will benefit the reader
   in learning more.
 
