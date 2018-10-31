@@ -1,15 +1,16 @@
 #!/bin/bash
-# ch13/bombard_sigrt.sh
+# ch12/bombard_sigrt.sh
 #--------------------------------------------------------------
 # This program is part of the source code released for the book
 #  "Hands-on System Programming with Linux"
 #  (c) Author: Kaiwan N Billimoria
 #  Publisher:  Packt
 #
-# From:  Ch 13 : Signaling Part II
+# From:  Ch 12 : Signaling Part II
 #----------------------------------------------------------------------
 # Shell script to bombard a given process with some specific RT signals.
 # Really a test case for the 'C' signal handling programs..
+# For details, please refer the book, Ch 12.
 name=$(basename $0)
 SIG1=SIGRTMAX-5   # sig# 59
 SIG2=SIGRTMAX     # sig# 64

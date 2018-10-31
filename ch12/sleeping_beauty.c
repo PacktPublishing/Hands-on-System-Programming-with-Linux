@@ -1,13 +1,12 @@
 /*
- * ch13/sleeping_beauty.c
+ * ch12/sleeping_beauty.c
  * ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 13 : Signaling Part II
+ * From:  Ch 12 : Signaling Part II
  ****************************************************************
  * Brief Description:
  * This program tests two ways of haveing a process (or thread) sleep:
@@ -20,7 +19,7 @@
  * (after signal interruption); we call the API in a loop, setting 'req'
  * to 'rem', thus ensuring that the sleep completes.
  *
- * For details, please refer the book, Ch 13.
+ * For details, please refer the book, Ch 12.
  */
 #include <stdio.h>
 #include <unistd.h>

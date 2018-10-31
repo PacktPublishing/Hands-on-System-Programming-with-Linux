@@ -1,13 +1,12 @@
 /*
- * ch13/rtsigs_waiter.c
+ * ch12/rtsigs_waiter.c
  * ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 13 : Signaling Part II
+ * From:  Ch 12 : Signaling Part II
  ****************************************************************
  * Brief Description:
  * Aim: to test how realtime signals are delivered after being unblocked.
@@ -26,7 +25,7 @@
  * queue is in *priority order* - first the lower-numbered RT sigs to higher-
  * numbered RT sigs.
  *
- * For details, please refer the book, Ch 13.
+ * For details, please refer the book, Ch 12.
  */
 #include <stdio.h>
 #include <stdlib.h>

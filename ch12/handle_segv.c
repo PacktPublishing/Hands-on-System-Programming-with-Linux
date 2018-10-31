@@ -1,13 +1,12 @@
 /*
- * ch13/handle_segv.c
+ * ch12/handle_segv.c
  * ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 13 : Signaling Part II
+ * From:  Ch 12 : Signaling Part II
  ****************************************************************
  * Brief Description:
  *
@@ -19,7 +18,7 @@
  * or major, good or bad) and, in this case, being a usermode 'bad'
  * fault, will send SIGSEGV to the process that invoked the fault - us!
  *
- * For details, please refer the book, Ch 13.
+ * For details, please refer the book, Ch 12.
  */
 #define _GNU_SOURCE
 #include <stdio.h>
