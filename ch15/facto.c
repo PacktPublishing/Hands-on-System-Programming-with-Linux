@@ -1,13 +1,12 @@
 /*
- * ch16/facto.c
+ * ch15/facto.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 16 : Multithreading Part II - Synchronization
+ * From:  Ch 15 : Multithreading Part II - Synchronization
  ****************************************************************
  * Brief Description:
  * A small program to demonstrate how a data "race" can be simulated. Here,
@@ -17,7 +16,8 @@
  * spectacularly wrong!
  * Tip: turn on the Verbose mode and run it, increasing the chances of a 'race'
  * occuring.
- * Refer Ch 16 for details, thank you.
+ *
+ * For details, please refer the book, Ch 15.
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -160,4 +160,5 @@ int main(int argc, char **argv)
 
 	pthread_exit(NULL);
 }
+
 /* vi: ts=8 */

@@ -1,20 +1,20 @@
 /*
- * ch16/cv_simple.c
+ * ch15/cv_simple.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 16 : Multithreading Part II - Synchronization
+ * From:  Ch 15 : Multithreading Part II - Synchronization
  ****************************************************************
  * Brief Description:
  * A small program to demonstrate the usage of a condition variable and it's
  * associated mutex lock. Here, we create two threads - A and B. We then have
  * thread B perform some 'work' and thread A synchronize upon completion of
  * that work - by using a CV !
- * Refer Ch 16 for details, thank you.
+ *
+ * For details, please refer the book, Ch 15.
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -126,4 +126,5 @@ int main(void)
 
 	pthread_exit(NULL);
 }
+
 /* vi: ts=8 */

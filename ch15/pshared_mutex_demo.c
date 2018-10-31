@@ -1,13 +1,12 @@
 /*
- * ch16/pshared_mutex_demo.c
+ * ch15/pshared_mutex_demo.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 16 : Multithreading Part II - Synchronization
+ * From:  Ch 15 : Multithreading Part II - Synchronization
  ****************************************************************
  * Brief Description:
  * This small application creates two shared memory regions:
@@ -20,7 +19,8 @@
  * it, they write a message into the second shared memory segment. At the end
  * of the app, we destroy the resources and display the shared 'comm' memory
  * buffer.
- * Refer Ch 16 for details, thank you.
+ *
+ * For details, please refer the book, Ch 15.
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -274,4 +274,5 @@ int main(int argc, char **argv)
 
 	pthread_exit(NULL);
 }
+
 /* vi: ts=8 */
