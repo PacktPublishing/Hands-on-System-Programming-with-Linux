@@ -1,14 +1,12 @@
 /*
- * ch7:simpcp2.c
- * 
+ * A_iobuf/simpcp2.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 7 : File IO Part I - The Essentials
+ * From:  Ch A : File IO Part I - The Essentials
  ****************************************************************
  * Brief Description:
  * This program is identical to the previous one - simpcp1.c - in intent and
@@ -21,7 +19,8 @@
  * encoding the IO in a loop.
  * b) the mode of the destination file is made to match that of the source
  * file.
- * For details, please refer the book, Ch 7.
+ *
+ * For details, please refer the book, Ch A, File I/O Essentials.
  */
 #define _GNU_SOURCE
 #include <stdio.h>

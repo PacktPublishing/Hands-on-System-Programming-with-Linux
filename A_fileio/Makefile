@@ -1,11 +1,11 @@
-# Makefile : Ch7
+# Makefile : A_iobuf/
 #--------------------------------------------------------------
 # This program is part of the source code released for the book
 #  "Hands-on System Programming with Linux"
 #  (c) Author: Kaiwan N Billimoria
 #  Publisher:  Packt
 #
-#  For Ch 7 : File IO Part I - The Essentials
+#  For Ch A : File IO Part I - The Essentials
 #----------------------------------------------------------------------
 ## Pl check and keep or remove <foo>_dbg_[asan|ub|msan] targets
 ## as desired. We have deliberately not kept the sanitizer targets; add

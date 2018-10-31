@@ -1,19 +1,19 @@
 /*
- * ch7:redirct.c
+ * A_iobuf/redirct.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 7 : File IO Essentials
+ * From:  Ch A : File IO Essentials
  ****************************************************************
  * Brief Description:
  * A tiny demo program showing how one can easily redirect a standard stream
  * to another. Here, we accept a filename as a parameter, and effectively
  * redirect stdout and stderr streams to it via the freopen(3) API.
- * For details, please refer the book, Ch 7.
+ *
+ * For details, please refer the book, Ch A, File I/O Essentials.
  */
 #define _GNU_SOURCE
 #include <stdio.h>

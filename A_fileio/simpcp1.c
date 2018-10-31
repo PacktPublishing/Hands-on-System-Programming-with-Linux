@@ -1,21 +1,20 @@
 /*
- * ch7:simpcp1.c
- * 
+ * A_iobuf/simpcp1.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 7 : File IO Part I - The Essentials
+ * From:  Ch A : File IO Part I - The Essentials
  ****************************************************************
  * Brief Description:
  * A demo program that implements a very simplistic 'cp' - copy - program. It
  * copies the given 'source file' to a given 'destination' pathname. It *only*
  * works on 'regular' files. We do not provide any 'fancy' option switches.
  * The destination file is overwritten if it exists.
- * For details, please refer the book, Ch 7.
+ *
+ * For details, please refer the book, Ch A, File I/O Essentials.
  */
 #define _GNU_SOURCE
 #include <stdio.h>

@@ -1,10 +1,10 @@
 #!/bin/bash
-# ch7/trc_iobuf.sh
+# A_iobuf/trc_iobuf.sh
 #
 # This is part of the source code released for the book
 #  "Hands-On System Programming with Linux", by Kaiwan N Billimoria
 #  Packt Publishers
-#  For Ch 7 : File IO Part I - The Essentials
+#  For Ch A : File IO Part I - The Essentials
 #
 # Simple wrapper script over the 'simpcp?.c' utils to test-run them.
 #
@@ -12,7 +12,8 @@
 #  a) with the 'plain vanilla' (default) IO buffer mode/size 
 #  b) with our own larger IO buffer mode/size
 # The tracing is done using 'ltrace'.
-# For details, please refer the book, Ch 7.
+#
+# For details, please refer the book, Ch A, File I/O Essentials.
 TRCFILE1=ltrc_vanilla.txt
 TRCFILE2=ltrc_setvbuf_large.txt
 TRCFILE3=ltrc_setvbuf_small.txt

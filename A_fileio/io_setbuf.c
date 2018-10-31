@@ -1,18 +1,18 @@
 /*
- * ch7:io_setbuf.c
+ * A_iobuf/io_setbuf.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 7 : File IO Essentials
+ * From:  Ch A : File IO Essentials
  ****************************************************************
  * Brief Description:
  * Usage of the setvbuf(3) to demonstrate (stdio layer) IO buffering,
  * resulting in clear IO performance improvements.
- * For details, please refer the book, Ch 7.
+ *
+ * For details, please refer the book, Ch A, File I/O Essentials.
  */
 #define _GNU_SOURCE
 #include <stdio.h>

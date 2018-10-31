@@ -1,17 +1,17 @@
 /*
- * ch7:mode_def.c
+ * A_iobuf/mode_def.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 7 : File IO Essentials
+ * From:  Ch A : File IO Essentials
  ****************************************************************
  * Brief Description:
  * Demonstrate correctly setting file permission bits at creation time.
- * For details, please refer the book, Ch 7.
+ *
+ * For details, please refer the book, Ch A, File I/O Essentials.
  */
 #define _GNU_SOURCE
 #include <stdio.h>

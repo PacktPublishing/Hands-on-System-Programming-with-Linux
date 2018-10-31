@@ -1,19 +1,19 @@
 /*
- * ch7:streamio1.c
+ * A_iobuf/streamio1.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 7 : File IO Essentials
+ * From:  Ch A : File IO Essentials
  ****************************************************************
  * Brief Description:
  * Open a stream (via the fopen(3) with either mode 'r' or 'a' depending on
  * the second parameter; then use the ftell(3) to query and report the current
  * 'seek' position.
- * For details, please refer the book, Ch 7.
+ *
+ * For details, please refer the book, Ch A, File I/O Essentials.
  */
 #define _GNU_SOURCE
 #include <stdio.h>

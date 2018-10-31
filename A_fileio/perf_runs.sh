@@ -1,10 +1,10 @@
 #!/bin/bash
-# ch7/perf_runs.sh
+# A_iobuf/perf_runs.sh
 #
 # This is part of the source code released for the book
 #  "Hands-On System Programming with Linux", by Kaiwan N Billimoria
 #  Packt Publishers
-#  For Ch 7 : File IO Part I - The Essentials
+#  For Ch A : File IO Part I - The Essentials
 #
 # NOTE! This script is provided "as-is" as a small value-add to the book;
 # the code is lightly tested and is for the reader to try...
@@ -13,7 +13,8 @@
 #  a) with the 'plain vanilla' (default) IO buffer mode/size 
 #  b) with our own larger IO buffer mode/size
 # The sampling and profiling is done using 'perf'!
-# For details, please refer the book, Ch 7.
+#
+# For details, please refer the book, Ch A, File I/O Essentials.
 
 # runcmd
 # Display and run the provided command.
