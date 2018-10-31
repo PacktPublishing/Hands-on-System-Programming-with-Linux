@@ -1,4 +1,4 @@
-# Makefile
+# misc/Makefile
 
 ALL := simple_feature_test_macros
 

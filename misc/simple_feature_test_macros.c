@@ -1,12 +1,10 @@
 /*
- * feature_test_macros.c
- * 
+ * misc/feature_test_macros.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
- *
  ****************************************************************
  * Brief Description:
  * Check for and print the value of several feature test macros 
