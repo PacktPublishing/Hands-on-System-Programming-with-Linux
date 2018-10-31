@@ -1,19 +1,18 @@
 #!/bin/bash
-# ch8/show_setuidgid.sh
-# 
+# ch7/show_setuidgid.sh
 #***************************************************************
 # This program is part of the source code released for the book
 #  "Hands-on System Programming with Linux"
 #  (c) Author: Kaiwan N Billimoria
 #  Publisher:  Packt
 #
-# From:
-#  Ch 8 : Process Credentials
+# From:   Ch 7 : Process Credentials
 #****************************************************************
 # Brief Description:
 # This bash script scans the system for all installed traditional
 # setuid-root and setgid programs.
-# For details, please refer the book, Ch 8.
+#
+# For details, please refer the book, Ch 7.
 name=$(basename $0)
 SEP="------------------------------------------------------------------"
 declare -a gDirArr=('/bin' '/usr/bin' '/sbin' '/usr/sbin' '/usr/local/bin' '/usr/local/sbin');

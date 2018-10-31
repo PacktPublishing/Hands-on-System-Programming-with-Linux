@@ -1,19 +1,18 @@
 /*
- * ch8/savedset_demo.c
- * 
+ * ch7/savedset_demo.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 8 : Process Credentials
+ * From:  Ch 7 : Process Credentials
  ****************************************************************
  * Brief Description:
  * Demo switching between privileged state and 'regular' creds via
  * the saved-set.
- * For details, please refer the book, Ch 8.
+ *
+ * For details, please refer the book, Ch 7.
  */
 #define _GNU_SOURCE
 #include <stdio.h>

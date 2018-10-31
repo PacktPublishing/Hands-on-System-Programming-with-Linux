@@ -1,11 +1,11 @@
-# Makefile, ch 8
+# Makefile, Ch 7
 #--------------------------------------------------------------
 # This program is part of the source code released for the book
 #  "Hands-on System Programming with Linux"
 #  (c) Author: Kaiwan N Billimoria
 #  Publisher:  Packt
 #
-# From: Ch 8 : Process Credentials
+# From: Ch 7 : Process Credentials
 #----------------------------------------------------------------------
 ## Pl check and keep or remove <foo>_dbg_[asan|ub|msan] targets
 ## as desired. We have deliberately not kept the sanitizer targets; add
