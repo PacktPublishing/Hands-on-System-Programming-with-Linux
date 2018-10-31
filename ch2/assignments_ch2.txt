@@ -1,4 +1,4 @@
-ASSIGNMENTS :: for Ch , 
+ASSIGNMENTS :: for Ch 2, Virtual Memory
 -----------------------------------------------------------------------
 This file is part of the source code released for the book
   "Hands-on System Programming with Linux"

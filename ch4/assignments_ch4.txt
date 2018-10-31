@@ -17,8 +17,8 @@ resized. First allocate 512 bytes; then write 3 test cases to resize that
 memory chunk to 1,024 bytes, 128 bytes and 1 MB.
 Display the memory statistics for each case and interpret them.
 
-Q2. Allocate two pages of page-aligned memory. Set memory
-protection as:
+Q2. memprot: Allocate two pages of page-aligned memory.
+Set memory protection as:
 First page  : r-x
 Second page : r--
 
