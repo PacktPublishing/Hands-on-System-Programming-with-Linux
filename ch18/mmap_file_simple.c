@@ -1,16 +1,18 @@
 /*
- * mmap_file_simple.c
+ * ch18/mmap_file_simple.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From: Ch 19 File IO Part 2 - More Advanced Techniques
+ * From: Ch 18 : Advanced File IO
  ****************************************************************
  * Brief Description:
  * mmap() a file region and display the contents. We setup a
  * private mapping.
+ *
+ * For details, please refer the book, Ch 18.
  */
 #define _GNU_SOURCE
 #include <stdio.h>
@@ -165,4 +167,5 @@ int main(int argc, char **argv)
 	close(fd_from);
 	exit(EXIT_SUCCESS);
 }
+
 /* vi: ts=8 */

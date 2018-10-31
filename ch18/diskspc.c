@@ -1,18 +1,18 @@
 /*
- * ch19:diskspc.c
+ * ch18/diskspc.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 19 : File IO Part II - More Advanced Aspects
+ * From:  Ch 18 : Advanced File IO
  ****************************************************************
  * Brief Description:
  * A simple experiment, using the posix_fallocate(3) API to, in effect,
  * 'reserve' the disk space specified for a file.
- * Pl refer to Ch 19 for details.
+ *
+ * For details, please refer the book, Ch 18.
  */
 #define _GNU_SOURCE
 #include <stdio.h>

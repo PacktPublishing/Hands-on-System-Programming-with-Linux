@@ -1,15 +1,22 @@
 /*
- * ch19:sgio_simple.c
+ * ch18/sgio_simple.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 19 : File IO Part 2 - More Advanced Aspects
+ * From:  Ch 18 : Advanced File IO
  ****************************************************************
  * Brief Description:
+ * A demo of using the performance-superior scatter-gather (SG) IO
+ * technique over the traditional {lseek, write} syscalls pairs to
+ * perform discontiguous writes to a file.
+ * We show both techniques, depending on the parameter passed.
+ * Also, as an aside, we demo how using the 'goto' statement for
+ * performing 'centralized error handling' is a superior technique!
+ *
+ * For details, please refer the book, Ch 18.
  */
 #define _GNU_SOURCE
 #include <stdio.h>
