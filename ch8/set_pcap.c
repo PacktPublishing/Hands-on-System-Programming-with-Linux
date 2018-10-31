@@ -1,12 +1,12 @@
 /*
- * ch9/set_pcap.c
+ * ch8/set_pcap.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From: Ch 9 : Process Capabilities
+ * From:  Ch 8 : Process Capabilities
  ****************************************************************
  * Brief Description:
  * This program briefly demonstrates how a process can add or drop
@@ -22,7 +22,7 @@
  * CAP_SYS_ADMIN; it will work as these are embedded into the
  * effective and permitted capsets.
  *
- * For details, refer to Ch 9.
+ * For details, refer to Ch 8.
  */
 #define _GNU_SOURCE
 #include <stdio.h>

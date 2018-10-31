@@ -1,11 +1,11 @@
-# Makefile : Ch 9
+# Makefile : Ch 8
 #--------------------------------------------------------------
 # This program is part of the source code released for the book
 #  "Hands-on System Programming with Linux"
 #  (c) Author: Kaiwan N Billimoria
 #  Publisher:  Packt
 #
-# From: Ch 9 : Process Capabilities
+# From: Ch 8 : Process Capabilities
 #----------------------------------------------------------------------
 ## Pl check and keep or remove <foo>_dbg_[asan|ub|msan] targets
 ## as desired. We have deliberately not kept the sanitizer targets; add

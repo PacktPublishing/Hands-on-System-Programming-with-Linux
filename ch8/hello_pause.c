@@ -1,19 +1,19 @@
 /*
- * ch9/hello_pause.c
- *
+ * ch8/hello_pause.c
  **********************************************************************
  * This program is part of the source code released for the book
  *  "Linux System Programming"
  *  (c) Kaiwan N Billimoria
  *  Packt Publishers
  *
- * From: Ch 9 : Process Capabilities
+ * From:  Ch 8 : Process Capabilities
  **********************************************************************
  * Brief Description:
  * A quick 'Hello, World'-like program; here, we call pause(2) to keep
  * the process alive while it runs in the background. The idea is, this
  * simple process serves as a test-bed for other apps.
- * For details, please refer the book, Ch 9.
+ *
+ * For details, please refer the book, Ch 8.
  */
 #define _GNU_SOURCE
 #include <stdio.h>
