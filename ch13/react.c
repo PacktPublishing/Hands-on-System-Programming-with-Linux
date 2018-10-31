@@ -1,13 +1,12 @@
 /*
- * ch14/react.c
+ * ch13/react.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 14 : Timers
+ * From:  Ch 13 : Timers
  ****************************************************************
  * Brief Description:
  * The 'Help' screen:
@@ -35,7 +34,7 @@ Your reaction time is displayed... Have fun!"
 * In the SIGINT handler, we show the 'count' - the number of SIGRTMIN's so far
 * delivered, and can thus calculate the approximate "reaction time" in ms.
 *
-* For details, please refer the book, Ch 14.
+* For details, please refer the book, Ch 13.
 */
 #define _GNU_SOURCE
 #include <stdio.h>

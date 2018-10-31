@@ -1,18 +1,18 @@
 /*
- * ch14/alarm2_rep.c
+ * ch13/alarm2_rep.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:  Ch 14 : Timers
+ * From:  Ch 13 : Timers
  ****************************************************************
  * Brief Description:
  * Here, we just enhance the previous code (ch14/alarm1.c) to have the
  * timeout continually repeat.
  *
- * For details, please refer the book, Ch 14.
+ * For details, please refer the book, Ch 13.
  */
 #define _GNU_SOURCE
 #include <stdio.h>

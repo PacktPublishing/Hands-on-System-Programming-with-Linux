@@ -1,12 +1,12 @@
 /*
- * ch14/runwalk_timer.c
+ * ch13/runwalk_timer.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:  Ch 14 : Timers
+ * From:  Ch 13 : Timers
  ****************************************************************
  * Brief Description:
  *
@@ -34,7 +34,7 @@
  *   set to level 'LOW' by default).
  * - links into the RT library.
  *
- * For details, please refer the book, Ch 14.
+ * For details, please refer the book, Ch 13.
  */
 #include <stdio.h>
 #include <signal.h>

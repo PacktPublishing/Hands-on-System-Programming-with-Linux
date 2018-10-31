@@ -1,12 +1,12 @@
 /*
- * ch14/intv_clksimple.c
+ * ch13/intv_clksimple.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:  Ch 14 : Timers
+ * From:  Ch 13 : Timers
  ****************************************************************
  * Brief Description:
  * A (very) simple digital clock - a demo of using the (older) UNIX
@@ -14,7 +14,7 @@
  * uses appropriate (signal-safe) APIs to query the current timestamp
  * within the SIGALRM signal handler.
  *
- * For details, please refer the book, Ch 14.
+ * For details, please refer the book, Ch 13.
  */
 #define _GNU_SOURCE
 #include <stdio.h>

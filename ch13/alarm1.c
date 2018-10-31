@@ -1,19 +1,19 @@
 /*
- * ch14/alarm1.c
+ * ch13/alarm1.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:  Ch 14 : Timers
+ * From:  Ch 13 : Timers
  ****************************************************************
  * Brief Description:
  * A simple demo for basic usage of the alarm(2) system call; passed
  * the time in seconds to timeout in, the process catches SIGALRM, arms the
  * timer and then just pauses, awaiting the signal.
  *
- * For details, please refer the book, Ch 14.
+ * For details, please refer the book, Ch 13.
  */
 #define _GNU_SOURCE
 #include <stdio.h>
