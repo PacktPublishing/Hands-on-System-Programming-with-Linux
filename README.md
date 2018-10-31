@@ -25,7 +25,7 @@ We definitely encourage the reader to clone (and try out the code!) like so:
 
     git clone https://github.com/PacktPublishing/Hands-on-System-Programming-with-Linux
 
-Once cloned, we suggest you first browse through the *Hardware\_Software\_List.pdf* file; it details the hardware and software requirements for getting the best experience with working with the book's codebase. It mentions which packages are required, which are optional, and, wherever possible, how to install it.
+Once cloned, we suggest you first browse through the [*Hardware\_Software\_List.pdf*](https://github.com/PacktPublishing/Hands-on-System-Programming-with-Linux/blob/master/Hardware_Software_List.pdf) file; it details the hardware and software requirements for getting the best experience with working with the book's codebase. It mentions which packages are required, which are optional, and, wherever possible, how to install it.
 
 Next, we suggest you proceed to build and try out the code examples.
 Also, a lot can be learned by working on the prescribed assignments for each chapter.
