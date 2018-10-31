@@ -1,0 +1,31 @@
+#***************************************************************
+# This program is part of the source code released for the book
+#  "Hands-on System Programming with Linux"
+#  (c) Author: Kaiwan N Billimoria
+#  Publisher:  Packt
+#
+# From: Ch 5: Linux Memory Issues
+# ****************************************************************
+# The question is reproduced for convenience, and the answer or solution
+# is immediately below:
+
+#----------------------------------------------------------------------
+Q2. Identify the memory issue here:
+
+char * bar2(void)
+{
+char *theanswer;
+theanswer = malloc(128);
+strncpy(theanswer, "THE ANSWER IS 42!", 127);
+return(theanswer);
+}
+void foo(void)
+{
+printf("2. the ans = %s\n", bar2());
+}
+#----------------------------------------------------------------------
+
+Ans 2.
+It's Not UAR as the memory is allocated on the heap; BUT, we fail to free
+it. Thus, it's a leakage defect.
+(Use valgrind and/or ASan to verify this).

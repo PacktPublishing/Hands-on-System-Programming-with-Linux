@@ -1,0 +1,27 @@
+#***************************************************************
+# This program is part of the source code released for the book
+#  "Hands-on System Programming with Linux"
+#  (c) Author: Kaiwan N Billimoria
+#  Publisher:  Packt
+#
+# From: Ch 5: Linux Memory Issues
+# ****************************************************************
+# The question is reproduced for convenience, and the answer or solution
+# is immediately below:
+
+#----------------------------------------------------------------------
+Q1. Identify the memory issue here:
+char * bar(void)
+{
+char theanswer[128];
+strncpy(theanswer, "THE ANSWER IS 42!", 127);
+return(theanswer);
+}
+void foo(void)
+{
+printf("1. the ans = %s\n", bar());
+}
+#----------------------------------------------------------------------
+Ans 1.
+UAR - Use After Return - defect (aka out-of-scope), as 'bar():theanswer'
+s a local variable and is being returned to caller foo().
