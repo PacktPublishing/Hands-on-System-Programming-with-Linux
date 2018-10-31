@@ -1,19 +1,19 @@
 /*
- * ch15/pthreads_joiner1.c
+ * ch14/pthreads_joiner1.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 15 : Multithreading Part I - The Essentials
+ * From:  Ch 14 : Multithreading Part I - The Essentials
  ****************************************************************
  * Brief Description:
  * Built upon pthreads3.c: this program has the main thread perform a "join"
  * upon all threads, thus ensuring it terminates last in the process (and thus
  * preventing any zombie).
- * Refer Ch 15 for details, thank you.
+ *
+ * For details, please refer the book, Ch 14.
  */
 #include <stdio.h>
 #include <stdlib.h>

@@ -1,4 +1,4 @@
-# Makefile
+# Makefile : ch14/param_passing/
 #----------------------------------------------------------------------
 #  ASSUMPTIONS ::
 #   1. the convenience files ../common.h and ../common.c

@@ -1,5 +1,5 @@
 /*
- * ch15/speed_multiprcs_vs_multithrd_simple/create_destroy/pthread_test.c
+ * ch14/speed_multiprcs_vs_multithrd_simple/create_destroy/pthread_test.c
  * 
  ***************************************************************
  * This program is part of the source code released for the book
@@ -7,13 +7,13 @@
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 15 : Multithreading Part I - The Essentials
+ * From:  Ch 14 : Multithreading Part I - The Essentials
  ****************************************************************
  * Brief Description:
  * A quick test: speed of fork/wait/exit vs 
  * pthread_create/pthread_join/pthread_exit.
- * Refer Ch 15 for details, thank you.
+ *
+ * For details, please refer the book, Ch 14.
  */
 #include <pthread.h>
 #include <stdio.h>

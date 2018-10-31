@@ -1,18 +1,18 @@
 /*
- * ch15/cr8_so_many_threads.c
+ * ch14/cr8_so_many_threads.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 15 : Multithreading Part I - The Essentials
+ * From:  Ch 14 : Multithreading Part I - The Essentials
  ****************************************************************
  * Brief Description:
  * A small program to create as many threads as the user says. The parameter is
  * the number of threads to create. There must be a limit, yes?
- * Refer Ch 15 for details, thank you.
+ *
+ * For details, please refer the book, Ch 14.
  */
 #include <stdio.h>
 #include <stdlib.h>

@@ -1,5 +1,5 @@
-# Makefile
-# Book: Hands-On System Programming with Linux, ch15
+# Makefile : ch14/speed_multiprcs_vs_multithrd_simple/create_destroy/
+# Book: Hands-On System Programming with Linux, ch14
 #----------------------------------------------------------------------
 #  ASSUMPTIONS ::
 #   1. the convenience files ../common.h and ../common.c

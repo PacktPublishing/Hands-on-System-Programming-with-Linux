@@ -1,19 +1,19 @@
 /*
- * ch15/disp_defattr_pthread.c
+ * ch14/disp_defattr_pthread.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 15 : Multithreading Part I - The Essentials
+ * From:  Ch 14 : Multithreading Part I - The Essentials
  ****************************************************************
  * Brief Description:
  * Query and display the default thread attributes that a pthread will be
  * created with if the attribute structure parameter to pthread_create(3)
  * is passed as NULL.
- * Refer Ch 15 for details, thank you.
+ *
+ * For details, please refer the book, Ch 14.
  */
 #include "../common.h"
 #include <stdio.h>

@@ -1,5 +1,5 @@
 #!/bin/bash
-# ch15/speed_multiprcs_vs_multithrd_simple/create_destroy/perf_runs.sh
+# ch14/speed_multiprcs_vs_multithrd_simple/create_destroy/perf_runs.sh
 #
 # A simple wrapper over 'perf record' and 'perf report'.
 # NOTE! This script is provided "as-is" as a small value-add to the book;

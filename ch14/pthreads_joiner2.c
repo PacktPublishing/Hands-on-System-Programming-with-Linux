@@ -1,13 +1,12 @@
 /*
- * ch15/pthreads_joiner2.c
+ * ch14/pthreads_joiner2.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 15 : Multithreading Part I - The Essentials
+ * From:  Ch 14 : Multithreading Part I - The Essentials
  ****************************************************************
  * Brief Description:
  * Built upon pthreads_joiner1.c: everything remains the same, except that
@@ -16,7 +15,7 @@
  * performed in a loop that iterates over the pthread_join in order from
  * #0, #1 and #2, the threads will be "joined" in that order only.
  *
- * Refer Ch 15 for details, thank you.
+ * For details, please refer the book, Ch 14.
  */
 #include <stdio.h>
 #include <stdlib.h>

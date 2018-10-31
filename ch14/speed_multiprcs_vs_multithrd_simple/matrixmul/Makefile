@@ -1,4 +1,4 @@
-# Makefile : ch15/speed_multiprcs_vs_multithrd_simple/matrixmul
+# Makefile : ch14/speed_multiprcs_vs_multithrd_simple/matrixmul
 #----------------------------------------------------------------------
 #  ASSUMPTIONS ::
 #   1. the convenience files ../common.h and ../common.c

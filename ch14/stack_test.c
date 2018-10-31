@@ -1,13 +1,12 @@
 /*
- * ch15/stack_test.c
+ * ch14/stack_test.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 15 : Multithreading Part I - The Essentials
+ * From:  Ch 14 : Multithreading Part I - The Essentials
  ****************************************************************
  * Brief Description:
  * A simple demo (and POC) on thread stack size. We query the default thread
@@ -18,7 +17,7 @@
  * onm the thread stack. If we set the stack size low enough, the stack indeed
  * overflows resulting in a segmentation fault ('segfault').
  *
- * Refer Ch 15 for details, thank you.
+ * For details, please refer the book, Ch 14.
  */
 #include <stdio.h>
 #include <stdlib.h>

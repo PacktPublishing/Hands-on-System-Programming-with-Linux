@@ -1,19 +1,19 @@
 /*
- * ch15/pthreads3.c
+ * ch14/pthreads3.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 15 : Multithreading Part I - The Essentials
+ * From:  Ch 14 : Multithreading Part I - The Essentials
  ****************************************************************
  * Brief Description:
  * Same as pthreads2.c: [a very simplistic (and slightly better than pthreads1.c)
  * 'Hello, world' for multithreading with Pthreads], plus, add a sleep() into
  * the worker routine.
- * Refer Ch 15 for details, thank you.
+ *
+ * For details, please refer the book, Ch 14.
  */
 #include <stdio.h>
 #include <stdlib.h>

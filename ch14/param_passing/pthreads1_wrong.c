@@ -1,20 +1,18 @@
 /*
- * ch15/param_passing/pthreads1.c
+ * ch14/param_passing/pthreads1.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 15 : Multithreading Part I - The Essentials
+ * From:  Ch 14 : Multithreading Part I - The Essentials
  ****************************************************************
  * Brief Description:
- *
- *
  * A very simplistic (and in fact, incorrect - racy!) 'Hello, world' for
  * multithreading with Pthreads.
- * Refer Ch 15 for details, thank you.
+ *
+ * For details, please refer the book, Ch 14.
  */
 #include <stdio.h>
 #include <stdlib.h>
