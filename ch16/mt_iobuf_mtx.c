@@ -9,7 +9,7 @@
  * From:  Ch 16 : Multithreading with Pthreads, Part 3
  ****************************************************************
  * Brief Description:
- * Here, we have ported the earlier <book-github-repo>/ch7/iobuf.c program
+ * Here, we have ported the earlier <book-github-repo>/A_iobuf/iobuf.c program
  * to be multithreaded. Once this is done, multiple threads can run through
  * the code of the 'testit' function, which is *not* thread safe.
  * So, we have reworked the function (now renamed to 'testit_mt_mtx') to use

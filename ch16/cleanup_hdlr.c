@@ -10,8 +10,8 @@
  ****************************************************************
  * Brief Description:
  * (Based on the previous program: mt_iobuf_rfct.c).
- * We have refactored the earlier ch7/iobuf program to become thread
- * safe (and saved it as ch17/mt_iobuf_rfct.c). But: what if, while
+ * We have refactored the earlier A_iobuf/iobuf.c program to become thread
+ * safe (and saved it as ch16/mt_iobuf_rfct.c). But: what if, while
  * the worker threads are performing IO, they get cancelled?
  * This program provides a 'cleanup handler' such that, even if they do
  * get cancelled, we handle the cleanup.

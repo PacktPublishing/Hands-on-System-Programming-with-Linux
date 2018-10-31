@@ -10,7 +10,7 @@
  ****************************************************************
  * Brief Description:
  * (Based on the previous program: mt_iobuf_mtx.c).
- * We have ported the earlier <book-github-repo>/ch7/iobuf.c program
+ * We have ported the earlier <book-github-repo>/A_iobuf/iobuf.c program
  * to be multithreaded. Once this is done, multiple threads can run through
  * the code of the 'testit' function, which is *not* thread safe.
  * So, we have refactored the function (now renamed to 'testit_mt_rfct') to use
