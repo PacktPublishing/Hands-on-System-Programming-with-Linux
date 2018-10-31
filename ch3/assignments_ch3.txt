@@ -1,0 +1,29 @@
+ASSIGNMENTS :: for Ch 3, Resource Limits
+-----------------------------------------------------------------------
+This file is part of the source code released for the book
+  "Hands-on System Programming with Linux"
+  (c) Author: Kaiwan N Billimoria
+  Publisher:  Packt (2018)
+-----------------------------------------------------------------------
+These assignments/exercises are for the reader's self-assessment. We do
+provide solutions/answers for *some* selected assignments in the directory
+solutions_to_assgn/ch'n' (within the book's GitHub repo of course). Doing
+the given assignments on your own will certainly help deepen your
+understanding and gain confidence; give them a try!
+-----------------------------------------------------------------------
+
+Q1. Write a C program segflt_nocore.c that will crash and cause a 'segfault'.
+Perform an operation on memory far beyond what you have malloc'ed and thus
+crash. (We shall cover, in subsequent chapters, in a lot of detail, regarding
+the malloc(3), segmentation fault, etc. For now, just go ahead with this).
+Ensure that before running the resource limit for core dump is non-zero;
+in fact, set it like this:
+ ulimit -c unlimited
+
+Now, on running your program, you should get a 'segfault' and thus a 'core'
+file (it may have a different name/location, depending; see the chapters on
+Signaling for details). 
+We want you to, in this program, set the core file limit to zero, such that
+even on a segfault, the core dump does Not occur.
+
+-----------------------------------------------------------------------

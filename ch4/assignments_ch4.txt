@@ -1,0 +1,27 @@
+ASSIGNMENTS :: for Ch 4, Dynamic Memory Allocation
+-----------------------------------------------------------------------
+This file is part of the source code released for the book
+  "Hands-on System Programming with Linux"
+  (c) Author: Kaiwan N Billimoria
+  Publisher:  Packt (2018)
+-----------------------------------------------------------------------
+These assignments/exercises are for the reader's self-assessment. We do
+provide solutions/answers for *some* selected assignments in the directory
+solutions_to_assgn/ch'n' (within the book's GitHub repo of course). Doing
+the given assignments on your own will certainly help deepen your
+understanding and gain confidence; give them a try!
+-----------------------------------------------------------------------
+
+Q1. Use the malloc_stats(3) API to see how exactly a memory chunk is
+resized. First allocate 512 bytes; then write 3 test cases to resize that
+memory chunk to 1,024 bytes, 128 bytes and 1 MB.
+Display the memory statistics for each case and interpret them.
+
+Q2. Allocate two pages of page-aligned memory. Set memory
+protection as:
+First page  : r-x
+Second page : r--
+
+Write test cases to confirm its working as expected.
+
+-----------------------------------------------------------------------
