@@ -1,4 +1,4 @@
-# Makefile : HOSPL book, ch17
+# Makefile : HOSPL book, ch16/
 #----------------------------------------------------------------------
 #  ASSUMPTIONS ::
 #   1. the convenience files ../common.h and ../common.c

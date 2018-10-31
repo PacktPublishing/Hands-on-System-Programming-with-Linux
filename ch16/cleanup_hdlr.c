@@ -1,13 +1,12 @@
 /*
- * ch17:cleanup_hdlr.c
+ * ch16/cleanup_hdlr.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 17 : Multithreading with Pthreads, Part 3
+ * From:  Ch 16 : Multithreading with Pthreads, Part 3
  ****************************************************************
  * Brief Description:
  * (Based on the previous program: mt_iobuf_rfct.c).
@@ -18,7 +17,8 @@
  * get cancelled, we handle the cleanup.
  * Here, to demonstrate, if the user passes '1' as the second parameter,
  * we deliberately cancel the first worker thread.
- * Refer Ch 17 for details, thank you.
+ *
+ * For details, please refer the book, Ch 16.
  */
 #define _GNU_SOURCE
 #include <stdio.h>

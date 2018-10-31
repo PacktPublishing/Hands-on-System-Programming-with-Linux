@@ -1,13 +1,12 @@
 /*
- * ch17:mt_iobuf_rfct.c
+ * ch16/mt_iobuf_rfct.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 17 : Multithreading with Pthreads, Part 3
+ * From:  Ch 16 : Multithreading with Pthreads, Part 3
  ****************************************************************
  * Brief Description:
  * (Based on the previous program: mt_iobuf_mtx.c).
@@ -17,7 +16,8 @@
  * So, we have refactored the function (now renamed to 'testit_mt_rfct') to use
  * additional parameters to avoid global / static variable usage, thus
  * rendering it thread safe.
- * Refer Ch 17 for details, thank you.
+ *
+ * For details, please refer the book, Ch 16.
  */
 #define _GNU_SOURCE
 #include <stdio.h>

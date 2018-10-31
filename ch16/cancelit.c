@@ -1,18 +1,18 @@
 /*
- * ch17/cancelit.c
+ * ch16/cancelit.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 17 : Multithreading with Pthreads, Part III
+ * From:  Ch 16 : Multithreading with Pthreads, Part III
  ****************************************************************
  * Brief Description:
  * This program demonstrates cancelling a thread; it is built upon our
- * earlier ch15/pthreads_joiner1.c code.
- * Refer Ch 17 for details, thank you.
+ * earlier ch14/pthreads_joiner1.c code.
+ *
+ * For details, please refer the book, Ch 16.
  */
 #include <stdio.h>
 #include <stdlib.h>

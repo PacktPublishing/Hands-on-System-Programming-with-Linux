@@ -1,13 +1,12 @@
 /*
- * ch17/tsig.c
+ * ch16/tsig.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 17 : Multithreading with Pthreads, Part III
+ * From:  Ch 16 : Multithreading with Pthreads, Part III
  ****************************************************************
  * Brief Description:
  * A quick demo of signal handling in multithreaded (MT) apps.
@@ -18,7 +17,8 @@
  *    created threads;
  *  - create a separate dedicated signal handling thread whose only job is to
  *    handle signals for the MT app; it does so via the blocking sigwait(3).
- * Refer Ch 17 for details, thank you.
+ *
+ * For details, please refer the book, Ch 16.
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -156,4 +156,5 @@ int main(void)
 	printf("\nmain: now dying... <Dramatic!> Farewell!\n");
 	pthread_exit(NULL);
 }
+
 /* vi: ts=8 */

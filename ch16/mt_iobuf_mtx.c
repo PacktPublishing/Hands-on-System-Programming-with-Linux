@@ -1,13 +1,12 @@
 /*
- * ch17:mt_iobuf_mtx.c
+ * ch16/mt_iobuf_mtx.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 17 : Multithreading with Pthreads, Part 3
+ * From:  Ch 16 : Multithreading with Pthreads, Part 3
  ****************************************************************
  * Brief Description:
  * Here, we have ported the earlier <book-github-repo>/ch7/iobuf.c program
@@ -16,7 +15,8 @@
  * So, we have reworked the function (now renamed to 'testit_mt_mtx') to use
  * a mutex lock in the critical sections, rendering it thread safe.
  * It does work, but performance gets impacted.
- * Refer Ch 17 for details, thank you.
+ *
+ * For details, please refer the book, Ch 16.
  */
 #define _GNU_SOURCE
 #include <stdio.h>

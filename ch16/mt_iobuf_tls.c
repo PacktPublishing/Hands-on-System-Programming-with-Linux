@@ -1,21 +1,21 @@
 /*
- * ch17:mt_iobuf_tls.c
+ * ch16/mt_iobuf_tls.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 17 : Multithreading with Pthreads, Part 3
+ * From:  Ch 16 : Multithreading with Pthreads, Part 3
  ****************************************************************
  * Brief Description:
- * Here, we have ported the earlier <book-github-repo>/ch7/iobuf.c program
+ * Here, we have ported the earlier <book-github-repo>/A_iobuf/iobuf.c program
  * to be multithreaded. Once this is done, multiple threads can run through
  * the code of the 'testit' function, which is *not* thread safe.
  * So, we have reworked the function (now renamed to 'testit_mt_tls') to use
  * a TLS (Thread-Local Storage) variable, thus rendering it thread safe.
- * Refer Ch 17 for details, thank you.
+ *
+ * For details, please refer the book, Ch 16.
  */
 #define _GNU_SOURCE
 #include <stdio.h>
