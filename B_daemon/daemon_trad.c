@@ -1,17 +1,19 @@
 /*
- * backmatter/daemon/daemon_trad.c
+ * B_daemon/daemon_trad.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Back Matter / Daemon Processes
+ * From:  Ch B : Daemon Processes
  ****************************************************************
  * Brief Description:
- * Refer Back Matter / Ch 'Daemon Processes' for details, thank you.
+ * A quick demo of 'daemoninzing' a process into a traditional
+ * SysV 'old-style' daemon process. (Lightly tested).
  * Ref: https://www.freedesktop.org/software/systemd/man/daemon.html
+ *
+ * For details, please refer the book, Ch B, Daemon Processes.
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -24,7 +26,7 @@
 #include <sys/resource.h>
 #include <sys/stat.h>
 #include <fcntl.h>
-#include "../../common.h"
+#include "../common.h"
 
 #define	SET_TO_NULDEV(orig_fd, new_fd) do {                       \
 	if (dup2(orig_fd, new_fd) < 0) {                          \
