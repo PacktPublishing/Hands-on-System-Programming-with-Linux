@@ -1,12 +1,12 @@
 /*
- * ch18:sched_rt_eg.c
+ * ch17/sched_rt_eg.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From: Ch 18 : CPU Scheduling
+ * From:  Ch 17 : CPU Scheduling
  ****************************************************************
  * Brief Description:
  * This application demonstrates a key facet of the Linux OS: setting the
@@ -37,7 +37,7 @@
  *	 - Prints the character '2' to the terminal in a loop
  *	 - Terminates.
  *
- * Refer to the book, Ch 18, for further details.
+ * For details, please refer the book, Ch 17.
  */
 #include <stdio.h>
 #include <unistd.h>

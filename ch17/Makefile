@@ -1,4 +1,4 @@
-# Makefile : ch18
+# Makefile : ch17/
 #----------------------------------------------------------------------
 #  ASSUMPTIONS ::
 #   1. the convenience files ../common.h and ../common.c
