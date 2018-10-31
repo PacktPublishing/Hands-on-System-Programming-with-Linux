@@ -1,12 +1,12 @@
 /*
- * ch12/altstack.c
+ * ch11/altstack.c
  * ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:  Ch 12 : Signaling Part I
+ * From:  Ch 11 : Signaling Part I
  ****************************************************************
  * Brief Description:
  *
@@ -24,7 +24,7 @@
  * Useful to use the shell script 'bombard_sig.sh' to literally bombard
  * the process with (the same) signal repeatedly.
  *
- * For details, please refer the book, Ch 12.
+ * For details, please refer the book, Ch 11.
  */
 #include <stdio.h>
 #include <stdlib.h>

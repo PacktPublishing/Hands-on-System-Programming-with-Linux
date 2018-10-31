@@ -1,11 +1,11 @@
-# Makefile, Ch 12.
+# Makefile, Ch 11.
 #--------------------------------------------------------------
 # This program is part of the source code released for the book
 #  "Hands-on System Programming with Linux"
 #  (c) Author: Kaiwan N Billimoria
 #  Publisher:  Packt
 #
-# From: Ch 12 : Signaling Part I
+# From:  Ch 11 : Signaling Part I
 #----------------------------------------------------------------------
 #  ASSUMPTIONS ::
 #   1. the convenience files ../common.h and ../common.c

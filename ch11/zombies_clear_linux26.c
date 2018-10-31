@@ -1,12 +1,12 @@
 /*
- * ch12/zombies_clear_linux26.c
+ * ch11/zombies_clear_linux26.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:  Ch 12 : Signalling Part I
+ * From:  Ch 11 : Signalling Part I
  ****************************************************************
  * Brief Description:
  *
@@ -22,7 +22,7 @@
  * (b) Simpler: just ignore the SIGCHLD signal. But: parent will never
  * know when child(ren) die.
  *
- * For details, please refer the book, Ch 12.
+ * For details, please refer the book, Ch 11.
  */
 #include <stdio.h>
 #include <unistd.h>

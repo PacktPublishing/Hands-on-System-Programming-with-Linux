@@ -1,19 +1,19 @@
 /*
- * ch12/sig2.c
+ * ch11/sig2.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:  Ch 12 : Signaling Part I
+ * From:  Ch 11 : Signaling Part I
  ****************************************************************
  * Brief Description:
  * A simple signal handling program: here, we 'trap' two signals -
  * SIGINT and SIGQUIT - via the sigaction(2) system call, and demonstrate
  * a simple signal handler function that 'handles' them, writing out a message.
  *
- * For details, please refer the book, Ch 12.
+ * For details, please refer the book, Ch 11.
  */
 #define _GNU_SOURCE
 #include <stdio.h>

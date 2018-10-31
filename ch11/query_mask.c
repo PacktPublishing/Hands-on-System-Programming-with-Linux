@@ -1,19 +1,19 @@
 /*
- * ch12/query_mask.c
+ * ch11/query_mask.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:  Ch 12 : Signalling Part I
+ * From:  Ch 11 : Signalling Part I
  ****************************************************************
  * Brief Description:
  * A demo to show all signals that are currently blocked by the calling
  * process. The actual function code of show_blocked_signals() is in our
  * ../common.c source file.
  *
- * For details, please refer the book, Ch 12.
+ * For details, please refer the book, Ch 11.
  */
 #define _GNU_SOURCE
 #include <stdio.h>
