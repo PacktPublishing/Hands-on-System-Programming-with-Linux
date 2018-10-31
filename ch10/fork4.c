@@ -1,20 +1,19 @@
 /*
- * ch11/fork4.c
- * 
+ * ch10/fork4.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 11 : Process Creation
+ * From:  Ch 10 : Process Creation
  ****************************************************************
  * Brief Description:
  * A quick and simple demo of the fork(2) system call.
  * This is a better version than the earlier ones; we take into account
- * some of the 'rules' of fork.
- * For details, please refer the book, Ch 11.
+ * some of our 'rules' of fork.
+ *
+ * For details, please refer the book, Ch 10.
  */
 #define _GNU_SOURCE
 #include <stdio.h>

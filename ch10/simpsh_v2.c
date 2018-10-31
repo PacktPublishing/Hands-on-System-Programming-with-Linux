@@ -1,13 +1,12 @@
 /*
- * ch11/simpsh_v2.c
+ * ch10/simpsh_v2.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 11 : Process Creation
+ * From:  Ch 10 : Process Creation
  ****************************************************************
  * Brief Description:
  * A small 'project': build a tiny, minimally functional shell.
@@ -17,7 +16,7 @@
  * Above, plus, we interpret the wait syscall's return value and
  * the value-result argument.
  *
- * For details, please refer the book, Ch 11.
+ * For details, please refer the book, Ch 10.
  */
 #define _GNU_SOURCE
 #include <stdio.h>

@@ -1,14 +1,13 @@
 /*
- * ch11/fork_r6_of.c
- *   'rule6_openfiles'
+ * ch10/fork_r6_of.c
+ *   read it as 'rule6_openfiles'
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 11 : Process Creation
+ * From:  Ch 10 : Process Creation
  ****************************************************************
  * Brief Description:
  * This small program is used to demonstrate our 'fork rule #6':
@@ -22,7 +21,7 @@
  * the correct seek prior to writing, but it does not work in
  * practice - as the file's seek position is _shared_.
  *
- * For details, please refer the book, Ch 11.
+ * For details, please refer the book, Ch 10.
  */
 #define _GNU_SOURCE
 #include <stdio.h>

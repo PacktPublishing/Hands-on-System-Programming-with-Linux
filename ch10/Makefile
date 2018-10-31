@@ -1,11 +1,11 @@
-# Makefile, Ch 11.
+# Makefile, Ch 10.
 #--------------------------------------------------------------
 # This program is part of the source code released for the book
 #  "Hands-on System Programming with Linux"
 #  (c) Author: Kaiwan N Billimoria
 #  Publisher:  Packt
 #
-# From: Ch 11 : Process Creation
+# From: Ch 10 : Process Creation
 #----------------------------------------------------------------------
 #  ASSUMPTIONS ::
 #   1. the convenience files ../common.h and ../common.c

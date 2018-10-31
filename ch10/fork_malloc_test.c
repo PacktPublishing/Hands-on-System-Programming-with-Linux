@@ -1,13 +1,12 @@
 /*
- * ch11/fork_malloc_test.c
+ * ch10/fork_malloc_test.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 11 : Process Creation
+ * From:  Ch 10 : Process Creation
  ****************************************************************
  * Brief Description:
  * Building on the sample code of fork5.c, this program is used to
@@ -28,7 +27,7 @@
  * Also, note we must free the memory chunk in _both_ the parent
  * and child processes.
  *
- * For details, please refer the book, Ch 11.
+ * For details, please refer the book, Ch 10.
  */
 #define _GNU_SOURCE
 #include <stdio.h>

@@ -1,12 +1,12 @@
 /*
- * ch11/simpsh_v3.c
+ * ch10/simpsh_v3.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From: Ch 11 : Process Creation
+ * From:  Ch 10 : Process Creation
  ****************************************************************
  * Brief Description:
  * A small 'project': build a tiny, minimally functional shell.
@@ -16,7 +16,7 @@
  * Same as simpsh_v2, plus, we now use the waitpid(2) system call to
  * have fine control over how exactly we wait for the child process.
  *
- * For details, please refer the book, Ch 11.
+ * For details, please refer the book, Ch 10.
  */
 #define _GNU_SOURCE
 #include <stdio.h>

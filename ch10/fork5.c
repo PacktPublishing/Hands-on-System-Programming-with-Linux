@@ -1,18 +1,18 @@
 /*
- * ch11/fork5.c
+ * ch10/fork5.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 11 : Process Creation
+ * From:  Ch 10 : Process Creation
  ****************************************************************
  * Brief Description:
  * fork4.c + testing of our 'rule #4': 
  *   "Data is copied across the fork."
- * For details, please refer the book, Ch 11.
+ *
+ * For details, please refer the book, Ch 10.
  */
 #define _GNU_SOURCE
 #include <stdio.h>
