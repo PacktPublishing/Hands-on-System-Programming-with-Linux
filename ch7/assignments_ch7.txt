@@ -1,0 +1,21 @@
+ASSIGNMENTS :: for Ch 7, Process Credentials
+-----------------------------------------------------------------------
+This file is part of the source code released for the book
+  "Hands-on System Programming with Linux"
+  (c) Author: Kaiwan N Billimoria
+  Publisher:  Packt (2018)
+-----------------------------------------------------------------------
+These assignments/exercises are for the reader's self-assessment. We do
+provide solutions/answers for *some* selected assignments in the directory
+solutions_to_assgn/ch'n' (within the book's GitHub repo of course). Doing
+the given assignments on your own will certainly help deepen your
+understanding and gain confidence; give them a try!
+-----------------------------------------------------------------------
+
+Q1. Login as another user on your Linux system (or, if required, create a new
+user 'test' account and then login to it). Then:
+(a) run the ch7/query_creds program and interpret its output.
+(b) Make the query_creds program a setuid (and later, setgid) executable, run it,
+and decipher the output.
+
+-----------------------------------------------------------------------

@@ -1,0 +1,57 @@
+ASSIGNMENTS :: for Ch 5, Linux Memory Issues
+-----------------------------------------------------------------------
+This file is part of the source code released for the book
+  "Hands-on System Programming with Linux"
+  (c) Author: Kaiwan N Billimoria
+  Publisher:  Packt (2018)
+-----------------------------------------------------------------------
+These assignments/exercises are for the reader's self-assessment. We do
+provide solutions/answers for *some* selected assignments in the directory
+solutions_to_assgn/ch'n' (within the book's GitHub repo of course). Doing
+the given assignments on your own will certainly help deepen your
+understanding and gain confidence; give them a try!
+-----------------------------------------------------------------------
+
+Q1. Identify the memory issue here:
+
+char * bar(void)
+{
+char theanswer[128];
+strncpy(theanswer, "THE ANSWER IS 42!", 127);
+return(theanswer);
+}
+void foo(void)
+{
+printf("1. the ans = %s\n", bar());
+}
+
+
+Q2. Identify the memory issue here:
+
+char * bar2(void)
+{
+char *theanswer;
+theanswer = malloc(128);
+strncpy(theanswer, "THE ANSWER IS 42!", 127);
+return(theanswer);
+}
+void foo(void)
+{
+printf("2. the ans = %s\n", bar2());
+}
+
+Use the compiler (well, obviously) and memory checker tools (you can come back
+to this assignment after covering the next chapter).
+
+
+Q3. Build and run the provided membugs program (on this book's GitHub site) on
+your Linux system; run all the test cases. Notice which memory errors escape
+detection unnoticed.
+(For now don't worry about how you can catch all the bugs—that, after all,
+is the topic of the next chapter!)
+
+Q4. Same as question 3, but this time, cross-compile the membugs code and try
+it on a different architecture (ARM, MIPS, PPC). Tip: using an emulator, such
+as Qemu, is one way to do this.
+
+-----------------------------------------------------------------------

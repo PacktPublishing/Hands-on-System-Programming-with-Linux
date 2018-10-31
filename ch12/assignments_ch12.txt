@@ -1,0 +1,50 @@
+ASSIGNMENTS :: for Ch 12, Signaling Part II
+-----------------------------------------------------------------------
+This file is part of the source code released for the book
+  "Hands-on System Programming with Linux"
+  (c) Author: Kaiwan N Billimoria
+  Publisher:  Packt (2018)
+-----------------------------------------------------------------------
+These assignments/exercises are for the reader's self-assessment. We do
+provide solutions/answers for *some* selected assignments in the directory
+solutions_to_assgn/ch'n' (within the book's GitHub repo of course). Doing
+the given assignments on your own will certainly help deepen your
+understanding and gain confidence; give them a try!
+-----------------------------------------------------------------------
+
+Q1. 'segv_altstack' : As seen in the previous chapter, the ch11/altstack.c
+program can suffer a segmentation fault when it's alternate signal stack
+is overflowed (by too many signals). 
+Write a SIGSEGV handler in the sa_sigaction prototype style to properly
+handle the case. It should display the signal origin (si_code) value and
+meaning as well as the faulting instruction or memory reference (address)
+that caused the segfault to occur.
+
+Q2. Write a program 'murder' (yes, quite dramatic!) whose job is to loop
+over all processes alive and try and abruptly kill them via SIGKILL. Run it
+both with and without root privileges (warning: running code like this as
+root could cause filesystem corruption; please, use a test virtual machine
+when trying dangerous stuff such as this).
+
+Q3. Write a small multi-process application that performs simple IPC via
+signaling: have process B send process A a signal; process A acknowledges
+the fact by sending process B another signal.
+
+Q4. 'killer' : A quick question: a process traps a signal (say SIGINT) and
+sets up a signal handler for it; later, it forks; the child process comes
+alive and runs.
+Have the new child just wait for a signal; then have the parent process send
+SIGINT to its child. What will happen? Will the child inherit the signal
+dispositions of its parent and thus enter the signal handler, or will the child
+die abruptly (default action)? Write the 'killer' program and find out!
+
+Q5. 'sigtmwtinfo' : Enhance our ch12/sigwt/sigwt program to use the
+sigtimedwait(2) API. Set the timeout at 1.5 seconds. If no signals is received
+within this time, print a simple timed out message to the console and continue
+waiting. Further, trap fatal kernel signals (such as SIGSEGV and SIGFPE) via
+the sigaction(2) API (and not via the sigtimedwait(2)). Arrange to have the
+kernel generate SIGSEGV (by deliberately inserting a bug in your code), and
+handle the resultant segfault, displaying diagnostics (as in the first
+assignment).
+
+-----------------------------------------------------------------------

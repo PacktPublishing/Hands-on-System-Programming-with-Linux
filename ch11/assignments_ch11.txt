@@ -1,0 +1,39 @@
+ASSIGNMENTS :: for Ch 11, Signaling Part I
+-----------------------------------------------------------------------
+This file is part of the source code released for the book
+  "Hands-on System Programming with Linux"
+  (c) Author: Kaiwan N Billimoria
+  Publisher:  Packt (2018)
+-----------------------------------------------------------------------
+These assignments/exercises are for the reader's self-assessment. We do
+provide solutions/answers for *some* selected assignments in the directory
+solutions_to_assgn/ch'n' (within the book's GitHub repo of course). Doing
+the given assignments on your own will certainly help deepen your
+understanding and gain confidence; give them a try!
+-----------------------------------------------------------------------
+
+Q1. What if we run an application process from a terminal window, but, while
+it's alive, close the terminal window?
+Well, it's a known fact—the processes belonging to that terminal (technically,
+in the process group associated with that tty device) will be killed via the
+SIGHUP signal; they will "hang up".
+Write a program 'donthup' that will not die even when its controlling terminal
+is shut down.
+
+Q2. Further to the previous question, there is a utility on UNIX/Linux that is
+used for precisely the same purpose: ensuring that the process is not killed
+when its controlling terminal is closed; which is it?
+
+Q3. Write a C program 'allkiller' that attempts to trap all signals on the
+platform (using a loop and the sigaction(2) API). Verify that the sigaction(2)
+succeeds; does it fail for any signals? If so, which signals, and why?
+
+Q4. atomic_A, atomic_B : As explained in Ch 11, section 'Signal-Safe Atomic
+Integers', implement a small application with two processes: A and B. Have
+process A complete some work, and signal process B that it has done so.
+Do this in an atomic fashion (no data races).
+
+Q5. Enhance the given ch11/defer_or_not program such that sending it the signal
+SIGUSR2 causes it to reset the global signal counter variable 't' to zero.
+
+-----------------------------------------------------------------------

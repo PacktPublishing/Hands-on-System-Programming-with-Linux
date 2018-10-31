@@ -1,0 +1,27 @@
+ASSIGNMENTS :: for Ch 8, Process Capabilities
+-----------------------------------------------------------------------
+This file is part of the source code released for the book
+  "Hands-on System Programming with Linux"
+  (c) Author: Kaiwan N Billimoria
+  Publisher:  Packt (2018)
+-----------------------------------------------------------------------
+These assignments/exercises are for the reader's self-assessment. We do
+provide solutions/answers for *some* selected assignments in the directory
+solutions_to_assgn/ch'n' (within the book's GitHub repo of course). Doing
+the given assignments on your own will certainly help deepen your
+understanding and gain confidence; give them a try!
+-----------------------------------------------------------------------
+
+Q1. To the previous chapter's ch7/query_creds program, (make a copy of it and)
+add the CAP_CHOWN capability; then, within it, use the chown(2) system call to
+change the ownership of a root-owned file to someone else.
+
+Q2. Run the provided ch8/show_caps.sh bash script on your Linux box and see
+which, if any, pre-installed programs are embedded with capability bits.
+
+Q3. (As mentioned above): Modify the ch8/set_pcap program; write a test case
+where only CAP_SYS_ADMIN capability is set on the binary executable and modify
+the code to not drop it when running under option 1. Will the seteuid(0) now
+succeed?
+
+-----------------------------------------------------------------------

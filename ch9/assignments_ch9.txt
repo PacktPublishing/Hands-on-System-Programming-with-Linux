@@ -1,0 +1,27 @@
+ASSIGNMENTS :: for Ch 9, Process Execution
+-----------------------------------------------------------------------
+This file is part of the source code released for the book
+  "Hands-on System Programming with Linux"
+  (c) Author: Kaiwan N Billimoria
+  Publisher:  Packt (2018)
+-----------------------------------------------------------------------
+These assignments/exercises are for the reader's self-assessment. We do
+provide solutions/answers for *some* selected assignments in the directory
+solutions_to_assgn/ch'n' (within the book's GitHub repo of course). Doing
+the given assignments on your own will certainly help deepen your
+understanding and gain confidence; give them a try!
+-----------------------------------------------------------------------
+
+Q1. We learned that the 'exec' axiom demands that both the predecessor and
+successor processes have the same PID; write a small proof-of-concept (POC)
+C program(s) to prove this statement.
+(Just displaying the PIDs in some fashion will suffice).
+
+Q2. Modify (or rewrite) the ch9/pdfrdr_exec application to instead use
+the pdftohtml CLI utility from the Poppler PDF toolset. Execute it from within
+your C code to generate HTML given a PDF path name.
+
+Q3. Write a C program that uses the FD_CLOEXEC flag to ensure that an open
+file in the predecessor is not inherited by the successor process.
+
+-----------------------------------------------------------------------

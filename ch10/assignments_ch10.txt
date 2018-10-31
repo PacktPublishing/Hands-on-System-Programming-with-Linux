@@ -1,0 +1,49 @@
+ASSIGNMENTS :: for Ch 10, Process Creation
+-----------------------------------------------------------------------
+This file is part of the source code released for the book
+  "Hands-on System Programming with Linux"
+  (c) Author: Kaiwan N Billimoria
+  Publisher:  Packt (2018)
+-----------------------------------------------------------------------
+These assignments/exercises are for the reader's self-assessment. We do
+provide solutions/answers for *some* selected assignments in the directory
+solutions_to_assgn/ch'n' (within the book's GitHub repo of course). Doing
+the given assignments on your own will certainly help deepen your
+understanding and gain confidence; give them a try!
+-----------------------------------------------------------------------
+
+Q1. Enhance the ch9/pdfrdr_exec.c program (from the previous chapter, Process
+Execution) - the one that execs a PDF reader app such that the given PDF
+document is displayed. Earlier, the predecessor was lost to the successor; now,
+rewrite the program with proper fork-exec-wait semantics such that the parent app
+retains control. Also, programatically verify whether the PDF reader succeeded
+or not (and if not, display the error exit status it returns).
+
+Q2. Enhance the ch10/fork4.c code to correctly validate the two parameters
+passed to the program (tip: use unsigned integers).
+
+Q3. Modify the ch10/simpsh_v1 program to accept commands with any number of
+arguments (Tip: string tokenization).
+
+Q4. smallbomb: Write a C program that calls fork three times; keep a single
+printf(3) after all the forks, displaying the PID. Interpret the resulting output.
+
+Q5. Develop a proof-of-concept (POC) forkbomb C application; the key point is
+to use your knowledge of resource limits to limit the maximum number of processes
+that can be created to 100 and limit the maximum data segment size to 1 GB.
+Test to verify these limits are not breached.
+
+Q6. fork2c: A process P forks (twice), thus creating two children, C1 and C2.
+Have the children stay alive performing some mundane task, and then have them
+terminate. Let C1 terminate in 10s (seconds) and C2 in 8s. When they die, the
+parent, P, must "fetch" their termination status information and print it out.
+
+Q7. orphan: Write a C program that generates an orphan process. Verify the
+same, by checking that the PPID becomes (typically, but not always,
+containers) 1.
+
+Q8. zombie: write a C program that generates a zombie process. Verify the same
+by running it in the background and checking the output of ps -l (it should
+show a Z in the second column and mark the process as being <defunct>).
+
+-----------------------------------------------------------------------
