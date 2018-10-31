@@ -1,19 +1,19 @@
 /*
- * ch10/pdfrdr_exec.c
+ * ch9/pdfrdr_exec.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 10 : Process Execution
+ * From:  Ch 9 : Process Execution
  ****************************************************************
  * Brief Description:
  * A simple demo of using the exec API; this program contains a
  * function to execute a PDF reader application, passing along a
  * PDF file to display.
- * For details, please refer the book, Ch 10.
+ *
+ * For details, please refer the book, Ch 9.
  */
 #define _GNU_SOURCE
 #include <stdio.h>

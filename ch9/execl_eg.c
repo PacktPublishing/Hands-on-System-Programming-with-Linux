@@ -1,18 +1,18 @@
 /*
- * ch10/execl_eg.c
+ * ch9/execl_eg.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 10 : Process Execution
+ * From:  Ch 9 : Process Execution
  ****************************************************************
  * Brief Description:
  * A simple demo of using the execl(3) API; we execute the
  * 'uname -[r|a]' here.
- * For details, please refer the book, Ch 10.
+ *
+ * For details, please refer the book, Ch 9.
  */
 #define _GNU_SOURCE
 #include <stdio.h>

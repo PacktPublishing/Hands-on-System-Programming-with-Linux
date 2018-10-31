@@ -1,14 +1,12 @@
 /*
- * ch10/successor_setnm.c
- * 
+ * ch9/successor_setnm.c
  ***************************************************************
  * This program is part of the source code released for the book
  *  "Hands-on System Programming with Linux"
  *  (c) Author: Kaiwan N Billimoria
  *  Publisher:  Packt
  *
- * From:
- *  Ch 10 : Process Execution
+ * From:  Ch 9 : Process Execution
  ****************************************************************
  * Brief Description:
  * [Paired with the 'predcs_name.c' code].
@@ -21,7 +19,8 @@
  * this, the successor process; the right way to do so is to use
  * the prctl(2) with the PR_SET_NAME parameter, (or via the 
  * pthread_setname_np(3) Pthreads API) within the successor itself.
- * For details, please refer the book, Ch 10.
+ *
+ * For details, please refer the book, Ch 9.
  */
 #define _GNU_SOURCE
 #include <stdio.h>
