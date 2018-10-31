@@ -1,0 +1,26 @@
+ASSIGNMENTS :: for Ch A, File I/O Essentials
+-----------------------------------------------------------------------
+This file is part of the source code released for the book
+  "Hands-on System Programming with Linux"
+  (c) Author: Kaiwan N Billimoria
+  Publisher:  Packt (2018)
+-----------------------------------------------------------------------
+These assignments/exercises are for the reader's self-assessment. We do
+provide solutions/answers for *some* selected assignments in the directory
+solutions_to_assgn/ch'n' (within the book's GitHub repo of course). Doing
+the given assignments on your own will certainly help deepen your
+understanding and gain confidence; give them a try!
+-----------------------------------------------------------------------
+
+Q1. 
+In our A_fileio/redirct.c program, we find that the printf data, though
+written first, follows the fprintf to stderr write in the log file.
+Modify the application to ensure that the printf data is written before
+the fprintf to stderr.
+
+Q2. [Adv] Write a dd-like utility; an almost completely flexible copy program.
+The user can pass the source, destination, unit size (or blocksize) – the
+chunks to perform the I/O in, the number of units, and so on (take a peek at
+the man page for dd(1) to see possible options to emulate).
+
+-----------------------------------------------------------------------
