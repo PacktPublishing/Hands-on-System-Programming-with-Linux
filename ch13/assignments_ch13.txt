@@ -1,0 +1,27 @@
+ASSIGNMENTS :: for Ch 13, Timers
+-----------------------------------------------------------------------
+This file is part of the source code released for the book
+  "Hands-on System Programming with Linux"
+  (c) Author: Kaiwan N Billimoria
+  Publisher:  Packt (2018)
+-----------------------------------------------------------------------
+These assignments/exercises are for the reader's self-assessment. We do
+provide solutions/answers for *some* selected assignments in the directory
+solutions_to_assgn/ch'n' (within the book's GitHub repo of course). Doing
+the given assignments on your own will certainly help deepen your
+understanding and gain confidence; give them a try!
+-----------------------------------------------------------------------
+
+Q1. Write a program '3intv.c' that sets up and experiences timeouts on three
+interval timers: ITIMER_REAL, ITIMER_VIRTUAL, and ITIMER_PROF timers.
+
+Q2. With regard to the ch13/intv_clksimple.c program that we covered in the
+section on (traditional) "Interval Timers", we know that using the printf(3)
+and fflush(3) APIs within a signal handler is bad programming practice - they
+are not async-signal-safe. But, what if the low-level design spec demands that
+we use exactly these APIs? How can we do this?
+Tip: Re-implement the program to use one of the synchronous blocking APIs
+(sigwait(3), sigwaitinfo(2), or sigtimedwait(2)) to wait for and catch the
+timer-expiry signal and print out the timestamp.
+
+-----------------------------------------------------------------------
