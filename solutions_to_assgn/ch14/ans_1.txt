@@ -1,0 +1,27 @@
+# Assignment Solution
+# ch14 : ans_1.txt
+#**************************************************************
+# This is part of the source code released for the book
+#  "Hands-on System Programming with Linux"
+#  (c) Author: Kaiwan N Billimoria
+#  Publisher:  Packt
+#
+# From:  Ch 14 : Multithreading Part I - Essentials
+#***************************************************************
+Qs 1: Under the section "Design Motivation", we mentioned the "Manager-Worker
+Model" as an effective and practical design strategy. But, what prevents a
+developer from applying the same to a multiprocess application (in effect,
+instead of using the pthread[_create/_join/_exit] why not use the
+fork/wait/exit model)? Will we not get the same advantages of
+"manager-worker"? Then, is it used in applications? If so, why, or why not?
+
+Ans 1 :
+The downside to using the fork/wait/exit model over the
+pthread[_create/_join/_exit] is obvious: creating and destroying processes
+(as opposed to threads) is much slower and takes much more RAM. So that's why.
+
+Having said that, there are real-world apps that would indeed _prefer_ using
+the multiprocessing model; f.e. Chrome (well it uses both, but its still a
+great example). To see why, read all the chapters on Multithreading in the
+book and also read this:
+http://www.google.com/googlebooks/chrome/med_00.html .
