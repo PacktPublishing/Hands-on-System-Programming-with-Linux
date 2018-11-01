@@ -1,0 +1,28 @@
+ASSIGNMENTS :: for Ch 15, Multithreading Part II - Synchronization
+-----------------------------------------------------------------------
+This file is part of the source code released for the book
+  "Hands-on System Programming with Linux"
+  (c) Author: Kaiwan N Billimoria
+  Publisher:  Packt (2018)
+-----------------------------------------------------------------------
+These assignments/exercises are for the reader's self-assessment. We do
+provide solutions/answers for *some* selected assignments in the directory
+solutions_to_assgn/ch'n' (within the book's GitHub repo of course). Doing
+the given assignments on your own will certainly help deepen your
+understanding and gain confidence; give them a try!
+-----------------------------------------------------------------------
+
+Q1. 'bankacc.c'
+Write a simple 'banking app' as a multithreaded process (as described in the
+early part of this chapter), just implementing (simplistic) deposit and
+withdraw functions. Test it with and without using the mutex lock to protect
+critical sections.
+
+Q2. Write a test case to demo the self deadlock (or Relock) defect.
+Tip: edit the ch15/facto.c application provided to take the mutex lock twice
+in succession (without any unlock).
+
+Q3. Test the ch15/cv_simple app via Valgrind's helgrind 'data race checker'
+tool.
+
+-----------------------------------------------------------------------
