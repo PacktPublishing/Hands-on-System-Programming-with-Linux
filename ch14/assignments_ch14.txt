@@ -1,0 +1,83 @@
+ASSIGNMENTS :: for Ch 14, Multithreading Part I - The Essentials
+-----------------------------------------------------------------------
+This file is part of the source code released for the book
+  "Hands-on System Programming with Linux"
+  (c) Author: Kaiwan N Billimoria
+  Publisher:  Packt (2018)
+-----------------------------------------------------------------------
+These assignments/exercises are for the reader's self-assessment. We do
+provide solutions/answers for *some* selected assignments in the directory
+solutions_to_assgn/ch'n' (within the book's GitHub repo of course). Doing
+the given assignments on your own will certainly help deepen your
+understanding and gain confidence; give them a try!
+-----------------------------------------------------------------------
+
+Q1. Under the "Design Motivation" section in this chapter, we mentioned the
+Manager-Worker model as an effective and practical design strategy. But, what
+prevents a developer from applying the same to a multiprocess application (in
+effect, instead of using pthread[_create/_join/_exit](3) APIs, why not use
+the fork/wait/exit syscalls model)? Will we not get the same advantages of
+"manager-worker"? Then, is it used in applications? If so, why, or why not?
+
+
+Q2. named_threads.c :
+Extend the ch14/cr8_so_many_threads.c program to give each individual thread
+a unique name prefix, as specified by the user (of the form
+ <name-prefix>_<thread#> ; see the following sample output):
+
+$ ./named_threads
+Usage: ./named_threads thread-name-prefix number-ofthreads-to-create
+$
+Example usage:
+$ ./named_threads MyApp 3 &
+[1] 16772
+Worker thread # 0: pausing now...
+Worker thread # 1: pausing now...
+Worker thread # 2: pausing now...
+$ ps -L
+PID    LWP  TTY     TIME          CMD
+16772 16772 pts/5 00:00:00 named_threads <defunct>
+16772 16774 pts/5 00:00:00 MyApp_0
+16772 16776 pts/5 00:00:00 MyApp_1
+16772 16777 pts/5 00:00:00 MyApp_2
+16785 16785 pts/5 00:00:00 ps
+17747 17747 pts/5 00:00:00 bash
+$ kill %1
+[1]+ Terminated ./named_threads MyApp 3
+$
+
+
+Q3. [A bit advanced] see_tid.c : To obtain the PID (Process ID) of the calling
+process, one issues the getpid(2) system call.
+a) What about obtaining the OS-level ID, that is, the thread ID (TID) of the
+calling thread?
+(Hints: (i) Don't confuse this TID with the library-layer thread ID – the second
+value-result parameter to pthread_create(3) - they're different.
+(ii) There is a Linux-specific way to obtain it).
+
+b) Having found this API, use it in an application to print both the PID and
+TID [warning! this code will be very Linux-specific and non-portable].
+
+
+Q4. pthreads_joiner3.c :
+Passing Multiple Parameters: Modify the ch14/pthreads_joiner2.c application
+to have the worker threads sleep for a specific number of seconds; pass both
+this number and the thread number (the loop index) as a parameter to the
+app.
+(Tips: (i) use a structure to pass multiple parameters to the worker thread.
+(ii) careful with thread-safety on passing the thread parameter).
+
+
+Q5. 'pthreads_joiner4.c' :
+Join with Timeout: Modify the ch14/pthreads_joiner3.c application to block the
+worker threads for only a specific maximum number of seconds; pass both this
+number and the thread number (the loop index) as a parameter to the app.
+
+
+Q6. pthreads_joiner_BUGGY_3.c :
+Make a copy of the ch14/struct_as_param.c program; deliberately insert a
+defect into the application by using exactly one allocated structure (not
+three) and passing it to each of the worker threads (this time, it should be
+"racy" and will (eventually) fail).
+
+-----------------------------------------------------------------------
