@@ -19,6 +19,6 @@ escape detection unnoticed, except now, use Valgrind and the Sanitizer
 tools to catch all memory issues.
 
 Q2. Check out this AddressSanitizerComparisonOfMemoryTools comparison table:
-https:/​/​github.​com/​google/​sanitizers/​wiki/AddressSanitizerComparisonOfMemoryTools.
+https://github.com/google/sanitizers/wiki/AddressSanitizerComparisonOfMemoryTools
 
 -----------------------------------------------------------------------
