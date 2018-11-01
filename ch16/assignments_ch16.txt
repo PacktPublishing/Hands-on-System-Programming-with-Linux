@@ -1,0 +1,28 @@
+ASSIGNMENTS :: for Ch 16, Multithreading Part III
+-----------------------------------------------------------------------
+This file is part of the source code released for the book
+  "Hands-on System Programming with Linux"
+  (c) Author: Kaiwan N Billimoria
+  Publisher:  Packt (2018)
+-----------------------------------------------------------------------
+These assignments/exercises are for the reader's self-assessment. We do
+provide solutions/answers for *some* selected assignments in the directory
+solutions_to_assgn/ch'n' (within the book's GitHub repo of course). Doing
+the given assignments on your own will certainly help deepen your
+understanding and gain confidence; give them a try!
+-----------------------------------------------------------------------
+
+Q1. Design and write a multithreaded application that uses multiple threads to
+generate different prime-number sequences (for example, the first thread
+generates primes from 1 to 5000, the second from 5001 to 10000, and so
+on). 
+
+Q2. Further enhance the above app to:
+a) Merge its output into a file 
+b) Provide the ability to have the end user cancel a thread's work.
+Provide cleanup handler(s) as required.
+
+Q3. Enhance our run-walk timer application from Chapter 13, Timers, to
+be multithreaded. Add functionality to start/stop/reset timers.
+
+-----------------------------------------------------------------------

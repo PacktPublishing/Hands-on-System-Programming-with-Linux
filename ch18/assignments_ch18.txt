@@ -1,0 +1,41 @@
+ASSIGNMENTS :: for Ch 18, Advanced File IO
+-----------------------------------------------------------------------
+This file is part of the source code released for the book
+  "Hands-on System Programming with Linux"
+  (c) Author: Kaiwan N Billimoria
+  Publisher:  Packt (2018)
+-----------------------------------------------------------------------
+These assignments/exercises are for the reader's self-assessment. We do
+provide solutions/answers for *some* selected assignments in the directory
+solutions_to_assgn/ch'n' (within the book's GitHub repo of course). Doing
+the given assignments on your own will certainly help deepen your
+understanding and gain confidence; give them a try!
+-----------------------------------------------------------------------
+
+Q1. Write a MT (multithreaded) app to perform better IO upon a given file by
+having multiple threads within the process simultaneously read/write
+to different portions of the file in parallel (Hint: use the pread(2), pwrite(2)
+APIs instead of the traditional read(2), write(2) system calls).
+
+Q2. Take the ch18/sgio_simple.c example from this chapter, and enhance it:
+a) In our (original) code, we have not checked anything but the failure case
+(-1 return) of the writev(2); enhance the code to ensure that all requested
+data is actually written (by calling the writev(2) in a loop as required).
+
+b) We only demonstrated a 'scattered' write with the writev(2); also insert a
+function to perform a 'gathered' read upon the discontiguous data regions that
+we just wrote (via the readv(2)).
+
+Q3. Dump the memory 'map' of your application (via /proc/[pid]/maps). Learn to
+interpret the various fields (look up the man page on proc(5) and figure it).
+
+Q4. Write an application to memory map a given region of a file (file pathname,
+start offset and length provided as parameters). Write it to work as both
+a private file-mapping a shared file-mapping (you should confirm that any
+writes to memory get propagated to the underlying file).
+
+Q5. Using the example code from the man page on aio(7) (POSIX AIO) as a
+starting template, write a MT application to perform AIO (issue multiple IO
+requests on multiple files via multiple threads concurrently).
+
+-----------------------------------------------------------------------

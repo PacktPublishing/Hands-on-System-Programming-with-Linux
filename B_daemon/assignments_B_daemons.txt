@@ -1,0 +1,27 @@
+ASSIGNMENTS :: for Ch A, File I/O Essentials
+-----------------------------------------------------------------------
+This file is part of the source code released for the book
+  "Hands-on System Programming with Linux"
+  (c) Author: Kaiwan N Billimoria
+  Publisher:  Packt (2018)
+-----------------------------------------------------------------------
+These assignments/exercises are for the reader's self-assessment. We do
+provide solutions/answers for *some* selected assignments in the directory
+solutions_to_assgn/ch'n' (within the book's GitHub repo of course). Doing
+the given assignments on your own will certainly help deepen your
+understanding and gain confidence; give them a try!
+-----------------------------------------------------------------------
+
+Q1. The codebase of the OpenSSH-Portable project is available here:
+ https:/​/​github.com/​openssh/​openssh-​portable .
+Browse through the code; particularly, see the traditional style daemon setup
+for sshd in the file sshd.c
+
+2. [Advanced] 'healthd' :
+Using the traditional-style daemon 'skeleton' function we provided
+(B_daemon/daemon_trad.c), implement a traditional style daemon that will block
+upon a UNIX-domain socket (or you could use a FIFO), and when contacted by a
+client process, will provide some details on the health of the system (memory,
+disk/storage, network usage stats, etc).
+
+-----------------------------------------------------------------------
