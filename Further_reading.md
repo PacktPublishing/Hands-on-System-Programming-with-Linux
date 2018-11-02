@@ -6,6 +6,10 @@ Book GitHub repo: [https://github.com/PacktPublishing/Hands-on-System-Programmin
 Here, we present, in a chapter-wise format, additional online as well as book references. We feel that these will help, you, the reader, in digging deeper into topics, or gaining additional views/information, or both. We definitely recommend you browse through the provided references. Also, you will find that some resources are repeated across chapters; we leave it this way so that the reader can gain all required resources in one place (and chapter-wise).
 (Obviously, these reference articles/blogs/etc are provided "as-is"; we cannot vouch for their correctness or validity).
 
+ - [Ch 19](https://github.com/PacktPublishing/Hands-on-System-Programming-with-Linux/blob/master/Further_reading.md#ch-19-troubleshooting-and-best-practices--further-reading)
+- Online Chapters
+	 - [A: File IO Essentials](https://github.com/PacktPublishing/Hands-on-System-Programming-with-Linux/blob/master/Further_reading.md#a-file-io-essentials--further-reading)
+
 ## Chapter 1, Linux System Architecture : Further Reading
 
  -  UNIX | History and Timeline: [http://www.​unix.org/what_is_unix/history_timeline.html](http://www.unix.org/what_is_unix/history_timeline.html)
@@ -280,6 +284,7 @@ codebase:
 - *The Art of UNIX Programming*, E.S. Raymond
 
 
+*[Online chapters below]*
 ## A: File I/O Essentials : Further Reading
 
 - 'File locking in Linux' - a tutorial : https://gavv.github.io/blog/file-locks/
