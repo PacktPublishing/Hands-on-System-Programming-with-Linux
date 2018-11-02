@@ -1,7 +1,8 @@
 ﻿# Further Reading
 *For the book "Hands-On System Programming with Linux", Kaiwan N Billimoria, Packt (2018).*
 ![enter image description here](https://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/B09991_MockupCover_New.png)
-Book GitHub repo: [https://github.com/PacktPublishing/Hands-on-System-Programming-with-Linux](https://github.com/PacktPublishing/Hands-on-System-Programming-with-Linux)
+
+*Book GitHub repo*: [https://github.com/PacktPublishing/Hands-on-System-Programming-with-Linux](https://github.com/PacktPublishing/Hands-on-System-Programming-with-Linux)
 
 Here, we present, in a chapter-wise format, additional online as well as book references. We feel that these will help, you, the reader, in digging deeper into topics, or gaining additional views/information, or both. We definitely recommend you browse through the provided references. Also, you will find that some resources are repeated across chapters; we leave it this way so that the reader can gain all required resources in one place (and chapter-wise).
 (Obviously, these reference articles/blogs/etc are provided "as-is"; we cannot vouch for their correctness or validity).
@@ -67,7 +68,11 @@ Linaro (Aarch32): [https://www.linaro.org/blog/want-to-learn-more-about-arms-cor
 - 'Understanding the Linux Virtual Memory Manager', Mel Gorman (a bit old now (July 2007), but extensive - and many areas still relevant - in-depth coverage of Linux memory internals); PDF: 
 [https://www.kernel.org/doc/gorman/pdf/understand.pdf](https://www.kernel.org/doc/gorman/pdf/understand.pdf)
 
-*(Ch 3, Resource Limits : Further Reading : \<none\>)*
+## Ch 3, Resource Limits : Further Reading
+
+Control Groups (cgroups) :
+-   Linux kernel documentation, Cgroups v2 :  [https://www.kernel.org/doc/Documentation/cgroup-v2.txt](https://www.kernel.org/doc/Documentation/cgroup-v2.txt)
+-   'CHAPTER 1. INTRODUCTION TO CONTROL GROUPS (CGROUPS)', RedHat (RHEL7) :  [https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/resource_management_guide/chap-introduction_to_control_groups](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/resource_management_guide/chap-introduction_to_control_groups)
 
 ## Chapter 4, Dynamic Memory Allocation : Further Reading
 
