@@ -256,7 +256,9 @@ codebase:
 - Blog article: 'Linux tracing systems & how they fit together', J Evans
 : https://jvns.ca/blog/2017/07/05/linux-tracing-systems/
 - Blog article: 'LOW-LEVEL SOFTWARE DESIGN' : https://kaiwantech.wordpress.com/2017/01/03/low-level-software-design/
-- Control Groups (cgroups): 'CHAPTER 1. INTRODUCTION TO CONTROL GROUPS (CGROUPS)', RedHat (RHEL7) : https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/resource_management_guide/chap-introduction_to_control_groups
+- Control Groups (cgroups): 
+	- Linux kernel documentation, Cgroups v2 : https://www.kernel.org/doc/Documentation/cgroup-v2.txt
+	- 'CHAPTER 1. INTRODUCTION TO CONTROL GROUPS (CGROUPS)', RedHat (RHEL7) : https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/resource_management_guide/chap-introduction_to_control_groups
 - The Linux *proc* filesystem
 	- "T H E /proc F I L E S Y S T E M" : https://www.kernel.org/doc/Documentation/filesystems/proc.txt
 	- "Chapter 3. The proc File System", CentOS : https://www.centos.org/docs/5/html/Deployment_Guide-en-US/ch-proc.html
