@@ -11,7 +11,7 @@ For the reader's convenience, below are chapter-wise links to the *Further Readi
 
  - [Ch 1, Linux System Architecture](https://github.com/PacktPublishing/Hands-on-System-Programming-with-Linux/blob/master/Further_reading.md#chapter-1-linux-system-architecture--further-reading)
 - [Ch 2, Virtual Memory](https://github.com/PacktPublishing/Hands-on-System-Programming-with-Linux/blob/master/Further_reading.md#chapter-2-virtual-memory--further-reading)
-- Ch 3, Resource Limits
+- [Ch 3, Resource Limits](https://github.com/PacktPublishing/Hands-on-System-Programming-with-Linux/blob/master/Further_reading.md#ch-3-resource-limits--further-reading)
 - [Ch 4, Dynamic Memory Allocation](https://github.com/PacktPublishing/Hands-on-System-Programming-with-Linux/blob/master/Further_reading.md#chapter-4-dynamic-memory-allocation--further-reading)
 - [Ch 5, Linux Memory Issues](https://github.com/PacktPublishing/Hands-on-System-Programming-with-Linux/blob/master/Further_reading.md#ch-5-linux-memory-issues--further-reading)
 - [Ch 6, Debugging Tools for Memory Issues](https://github.com/PacktPublishing/Hands-on-System-Programming-with-Linux/blob/master/Further_reading.md#ch-6-debugging-tools-for-memory-issues--further-reading)
