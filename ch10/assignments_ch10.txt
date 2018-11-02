@@ -12,7 +12,8 @@ the given assignments on your own will certainly help deepen your
 understanding and gain confidence; give them a try!
 -----------------------------------------------------------------------
 
-Q1. Enhance the ch9/pdfrdr_exec.c program (from the previous chapter, Process
+Q1. 'pdf_rdr':
+Enhance the ch9/pdfrdr_exec.c program (from the previous chapter, Process
 Execution) - the one that execs a PDF reader app such that the given PDF
 document is displayed. Earlier, the predecessor was lost to the successor; now,
 rewrite the program with proper fork-exec-wait semantics such that the parent app
@@ -33,16 +34,24 @@ to use your knowledge of resource limits to limit the maximum number of processe
 that can be created to 100 and limit the maximum data segment size to 1 GB.
 Test to verify these limits are not breached.
 
-Q6. fork2c: A process P forks (twice), thus creating two children, C1 and C2.
+Q6. [Advanced] The same as Q5 above, but this time use the Control Groups
+(cgroups) infrastructure to set up a cgroup within which yor process(es) lives;
+all processes in this cgroup must have an upper limit on max processes and data
+segment memory. 
+(Tip: use the 'pids' and 'memory' controllers. Ref: 
+https://www.kernel.org/doc/Documentation/cgroup-v2.txt
+https://www.kernel.org/doc/Documentation/cgroup-v1/pids.txt ).
+
+Q7. fork2c: A process P forks (twice), thus creating two children, C1 and C2.
 Have the children stay alive performing some mundane task, and then have them
 terminate. Let C1 terminate in 10s (seconds) and C2 in 8s. When they die, the
 parent, P, must "fetch" their termination status information and print it out.
 
-Q7. orphan: Write a C program that generates an orphan process. Verify the
+Q8. orphan: Write a C program that generates an orphan process. Verify the
 same, by checking that the PPID becomes (typically, but not always,
 containers) 1.
 
-Q8. zombie: write a C program that generates a zombie process. Verify the same
+Q9. zombie: write a C program that generates a zombie process. Verify the same
 by running it in the background and checking the output of ps -l (it should
 show a Z in the second column and mark the process as being <defunct>).
 
