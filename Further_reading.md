@@ -6,9 +6,28 @@ Book GitHub repo: [https://github.com/PacktPublishing/Hands-on-System-Programmin
 Here, we present, in a chapter-wise format, additional online as well as book references. We feel that these will help, you, the reader, in digging deeper into topics, or gaining additional views/information, or both. We definitely recommend you browse through the provided references. Also, you will find that some resources are repeated across chapters; we leave it this way so that the reader can gain all required resources in one place (and chapter-wise).
 (Obviously, these reference articles/blogs/etc are provided "as-is"; we cannot vouch for their correctness or validity).
 
- - [Ch 19](https://github.com/PacktPublishing/Hands-on-System-Programming-with-Linux/blob/master/Further_reading.md#ch-19-troubleshooting-and-best-practices--further-reading)
-- Online Chapters
+For the reader's convenience, below are chapter-wise links to the *Further Reading* notes:
+
+ - [Ch 1, Linux System Architecture](https://github.com/PacktPublishing/Hands-on-System-Programming-with-Linux/blob/master/Further_reading.md#chapter-1-linux-system-architecture--further-reading)
+- [Ch 2, Virtual Memory](https://github.com/PacktPublishing/Hands-on-System-Programming-with-Linux/blob/master/Further_reading.md#chapter-2-virtual-memory--further-reading)
+- Ch 3, Resource Limits
+- [Ch 4, Dynamic Memory Allocation](https://github.com/PacktPublishing/Hands-on-System-Programming-with-Linux/blob/master/Further_reading.md#chapter-4-dynamic-memory-allocation--further-reading)
+- [Ch 5, Linux Memory Issues](https://github.com/PacktPublishing/Hands-on-System-Programming-with-Linux/blob/master/Further_reading.md#ch-5-linux-memory-issues--further-reading)
+- [Ch 6, Debugging Tools for Memory Issues](https://github.com/PacktPublishing/Hands-on-System-Programming-with-Linux/blob/master/Further_reading.md#ch-6-debugging-tools-for-memory-issues--further-reading)
+- [Ch 7, Process Credentials and Ch 8, Process Capabilities](https://github.com/PacktPublishing/Hands-on-System-Programming-with-Linux/blob/master/Further_reading.md#ch-7-process-credentials-and-ch-8-process-capabilities--further-reading)
+- [Ch 9, Process Execution and Ch 10, Process Creation](https://github.com/PacktPublishing/Hands-on-System-Programming-with-Linux/blob/master/Further_reading.md#ch-9-process-execution-and-ch-10-process-creation--further-reading)
+- [Ch 11, Signalling - Part I](https://github.com/PacktPublishing/Hands-on-System-Programming-with-Linux/blob/master/Further_reading.md#ch-11-signaling---part-i--further-reading)
+- [Ch 12, Signalling - Part II](https://github.com/PacktPublishing/Hands-on-System-Programming-with-Linux/blob/master/Further_reading.md#ch-12-signaling---part-ii--further-reading)
+- [Ch 13, Timers](https://github.com/PacktPublishing/Hands-on-System-Programming-with-Linux/blob/master/Further_reading.md#ch-13-timers--further-reading) 
+- [Ch 14, Linux Multithreading with Pthreads: Part 1 - the Essentials](https://github.com/PacktPublishing/Hands-on-System-Programming-with-Linux/blob/master/Further_reading.md#ch-14-multithreading-part-i---essentials--further-reading)
+- [Ch 15, Linux Multithreading with Pthreads: Part 2 - Synchronization](https://github.com/PacktPublishing/Hands-on-System-Programming-with-Linux/blob/master/Further_reading.md#ch-15-multithreading-part-ii---synchronization--further-reading)
+- [Ch 16, Linux Multithreading with Pthreads: Part 3](https://github.com/PacktPublishing/Hands-on-System-Programming-with-Linux/blob/master/Further_reading.md#ch-16-multithreading-part-iii--further-reading)
+- [Ch 17, CPU Scheduling on Linux](https://github.com/PacktPublishing/Hands-on-System-Programming-with-Linux/blob/master/Further_reading.md#ch-17-cpu-scheduling--further-reading)
+- [Ch 18, File I/O Part 2 – More Advanced Aspects](https://github.com/PacktPublishing/Hands-on-System-Programming-with-Linux/blob/master/Further_reading.md#ch-18-advanced-file-io--further-reading)
+ - [Ch 19, Troubleshooting and Best Practices](https://github.com/PacktPublishing/Hands-on-System-Programming-with-Linux/blob/master/Further_reading.md#ch-19-troubleshooting-and-best-practices--further-reading)
+- *Online Chapters*
 	 - [A: File IO Essentials](https://github.com/PacktPublishing/Hands-on-System-Programming-with-Linux/blob/master/Further_reading.md#a-file-io-essentials--further-reading)
+	 - [B: Daemon Processes](https://github.com/PacktPublishing/Hands-on-System-Programming-with-Linux/blob/master/Further_reading.md#b-daemon-processes--further-reading)
 
 ## Chapter 1, Linux System Architecture : Further Reading
 
@@ -306,5 +325,7 @@ Units, and the Journal' : https://www.digitalocean.com/community/tutorials/syste
 	- Systemd Documentation : http://0pointer.de/blog/projects/systemd-docs.html
 	- Systemd FAQs : https://www.freedesktop.org/wiki/Software/systemd/FrequentlyAskedQuestions/
 - *Debug a daemon process* with Valgrind-GDB (vgdb) debugging. Look up this chapter of Valgrind's manual: *Using and understanding the Valgrind core: Advanced Topics* : http://valgrind.org/docs/manual/manual-core-adv.html
+
+*[To Top](https://github.com/PacktPublishing/Hands-on-System-Programming-with-Linux/blob/master/Further_reading.md#further-reading)*
 
 [End of Doc]
