@@ -1,4 +1,4 @@
-ASSIGNMENTS :: for Ch 16, Multithreading Part III
+ASSIGNMENTS :: for Ch 16, Multithreading Part 3
 -----------------------------------------------------------------------
 This file is part of the source code released for the book
   "Hands-on System Programming with Linux"
@@ -12,12 +12,14 @@ the given assignments on your own will certainly help deepen your
 understanding and gain confidence; give them a try!
 -----------------------------------------------------------------------
 
-Q1. Design and write a multithreaded application that uses multiple threads to
+Q1. mt_primes1:
+Design and write a multithreaded application that uses multiple threads to
 generate different prime-number sequences (for example, the first thread
 generates primes from 1 to 5000, the second from 5001 to 10000, and so
 on). 
 
-Q2. Further enhance the above app to:
+Q2. mt_primes2:
+Further enhance the above app to:
 a) Merge its output into a file 
 b) Provide the ability to have the end user cancel a thread's work.
 Provide cleanup handler(s) as required.
