@@ -16,7 +16,8 @@ ALL :=  mt_iobuf_mtx mt_iobuf_mtx_dbg \
         mt_iobuf_tls mt_iobuf_tls_dbg \
 	cancelit cancelit_dbg \
 	cleanup_hdlr cleanup_hdlr_dbg \
-	tsig tsig_dbg
+	tsig tsig_dbg \
+	pthreads_app_template pthreads_app_template_dbg
 
 CC=${CROSS_COMPILE}gcc
 CL=${CROSS_COMPILE}clang
@@ -137,6 +138,33 @@ tsig_dbg.o: tsig.c
 	${CC} ${CFLAGS_DBG} -c tsig.c -o tsig_dbg.o
 tsig_dbg: tsig_dbg.o common_dbg.o
 	${CC} -o tsig_dbg tsig_dbg.o common_dbg.o ${LINKIN}
+
+#--- Target :: pthreads_app_template
+pthreads_app_template.o: pthreads_app_template.c
+	${CC} ${CFLAGS} -c pthreads_app_template.c -o pthreads_app_template.o
+pthreads_app_template: common.o pthreads_app_template.o
+	${CC} -o pthreads_app_template pthreads_app_template.o common.o ${LINKIN}
+
+pthreads_app_template_dbg.o: pthreads_app_template.c
+	${CC} ${CFLAGS_DBG} -c pthreads_app_template.c -o pthreads_app_template_dbg.o
+pthreads_app_template_dbg: pthreads_app_template_dbg.o common_dbg.o
+	${CC} -o pthreads_app_template_dbg pthreads_app_template_dbg.o common_dbg.o ${LINKIN}
+
+ #--- Sanitizers for pthreads_app_template :: (use clang): <foo>_dbg_[asan|ub|msan]
+pthreads_app_template_dbg_asan.o: pthreads_app_template.c
+	${CL} ${CFLAGS_DBG_ASAN} -c pthreads_app_template.c -o pthreads_app_template_dbg_asan.o
+pthreads_app_template_dbg_asan: pthreads_app_template_dbg_asan.o common_dbg_asan.o
+	${CL} ${CFLAGS_DBG_ASAN} -o pthreads_app_template_dbg_asan pthreads_app_template_dbg_asan.o common_dbg_asan.o ${LINKIN}
+
+pthreads_app_template_dbg_ub.o: pthreads_app_template.c
+	${CL} ${CFLAGS_DBG_UB} -c pthreads_app_template.c -o pthreads_app_template_dbg_ub.o
+pthreads_app_template_dbg_ub: pthreads_app_template_dbg_ub.o common_dbg_ub.o
+	${CL} ${CFLAGS_DBG_UB} -o pthreads_app_template_dbg_ub pthreads_app_template_dbg_ub.o common_dbg_ub.o ${LINKIN}
+
+pthreads_app_template_dbg_msan.o: pthreads_app_template.c
+	${CL} ${CFLAGS_DBG_MSAN} -c pthreads_app_template.c -o pthreads_app_template_dbg_msan.o
+pthreads_app_template_dbg_msan: pthreads_app_template_dbg_msan.o common_dbg_msan.o
+	${CL} ${CFLAGS_DBG_MSAN} -o pthreads_app_template_dbg_msan pthreads_app_template_dbg_msan.o common_dbg_msan.o ${LINKIN}
 
 
 # indent- "beautifies" C code into the "Linux kernel style".
