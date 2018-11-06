@@ -12,8 +12,8 @@ the given assignments on your own will certainly help deepen your
 understanding and gain confidence; give them a try!
 -----------------------------------------------------------------------
 
-Q1. Write a program that has a few threads running in a tight CPU-bound loop;
-then, do the following:
+Q1. Write a multithreaded app that has a few threads running in a tight
+CPU-bound loop; then, do the following:
 
 Use the chrt(1) utility to query and modify the various thread's scheduling
 policy and real-time priority.
@@ -26,7 +26,7 @@ that is, use system calls (or the pthread wrapper APIs) to modify thread's
 scheduling policy / real-time priority and CPU affinity mask.
 
 Q3. Enhance the provided ch17/sched_rt_eg.c code, allowing the user to
-specify the scheduling policy and real-time priority of the two worker
-threads; test it with various combinations.
+specify the scheduling policy and real-time priority of the two (soft) RT
+worker threads; test it with various combinations.
 
 -----------------------------------------------------------------------
