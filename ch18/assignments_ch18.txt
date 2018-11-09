@@ -12,10 +12,18 @@ the given assignments on your own will certainly help deepen your
 understanding and gain confidence; give them a try!
 -----------------------------------------------------------------------
 
-Q1. Write a MT (multithreaded) app to perform better IO upon a given file by
-having multiple threads within the process simultaneously read/write
-to different portions of the file in parallel (Hint: use the pread(2), pwrite(2)
-APIs instead of the traditional read(2), write(2) system calls).
+Q1. mt_copy.c
+In Ch A 'File I/O Essentials' section 'Correctly using the read/write APIs', we
+demonstrated a program to correctly copy a source to destination file (a very
+simple 'cp' program, in effect). 
+Enhance this program creating a fully multithreaded parallelized version of the
+same - it hosuld be able to copy a given source file to a given destination file.
+Use this strategy: divide up the work among N threads (the user can pass N as a
+parameter); *each thread* performs 1/Nth of the IO, reading from src file from a
+start offset for 1/N bytes and writing to the destination file (always just
+overwritten) at the same offset for the same length (take care of writing any
+remaining bytes as well). (Hint: use the pread(2), pwrite(2) APIs instead of
+the traditional read(2), write(2) system calls).
 
 Q2. Take the ch18/sgio_simple.c example from this chapter, and enhance it:
 a) In our (original) code, we have not checked anything but the failure case
@@ -26,8 +34,10 @@ b) We only demonstrated a 'scattered' write with the writev(2); also insert a
 function to perform a 'gathered' read upon the discontiguous data regions that
 we just wrote (via the readv(2)).
 
-Q3. Dump the memory 'map' of your application (via /proc/[pid]/maps). Learn to
-interpret the various fields (look up the man page on proc(5) and figure it).
+Q3. [A little out of context but a v useful exercise]
+Dump the memory 'map' of your application (via /proc/[pid]/maps). (To do so,
+keep the process asleep). Learn to interpret the various fields (look up the
+man page on proc(5) and figure it).
 
 Q4. Write an application to memory map a given region of a file (file pathname,
 start offset and length provided as parameters). Write it to work as both
