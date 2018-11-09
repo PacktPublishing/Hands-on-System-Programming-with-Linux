@@ -26,9 +26,20 @@
 
 #define NTHREADS	3
 
+struct stToThread {
+	int thrdnum;
+	int start_num, end_num;
+	char *iobuf;
+};
+static struct stToThread *ToThread[NTHREADS];
+
+
 static void cleanup_handler(void *arg)
 {
-	printf("+++ In %s +++\n", __func__);
+	struct stToThread *pstToThread = (struct stToThread *)arg;
+	assert(pstToThread);
+
+	printf("+++ In %s():thrd #%d +++\n", __func__, pstToThread->thrdnum);
 	//free(arg);
 }
 
@@ -52,12 +63,6 @@ static void *worker(void *msg)
 	pthread_exit((void *)0);
 }
 
-struct stToThread {
-	int thrdnum;
-	int start_num, end_num;
-	char *iobuf;
-};
-static struct stToThread *ToThread[NTHREADS];
 
 int main(int argc, char **argv)
 {
@@ -82,7 +87,7 @@ int main(int argc, char **argv)
 		ret = pthread_create(&tid[i], &attr,
 				     worker, (void *)ToThread[i]);
 		if (ret)
-			FATAL("pthread_create() failed! [%d]\n", ret);
+			FATAL("[%d] pthread_create() failed! [%d]\n", i, ret);
 		printf("Thread #%d successfully created\n", i);
 	}
 	pthread_attr_destroy(&attr);
@@ -103,7 +108,7 @@ int main(int argc, char **argv)
 	for (i = 0; i < NTHREADS; i++) {
 		ret = pthread_join(tid[i], (void **)&stat);
 		if (ret)
-			WARN("pthread_join() failed! [%d]\n", ret);
+			WARN("[%d] pthread_join() failed! [%d]\n", i, ret);
 		else {
 			printf(" Thread #%d successfully joined; it "
 			       "terminated with status=%ld\n", i, (long)stat);
