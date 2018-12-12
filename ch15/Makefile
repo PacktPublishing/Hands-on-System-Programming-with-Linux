@@ -97,7 +97,12 @@ cv_simple_dbg.o: cv_simple.c
 cv_simple_dbg: cv_simple_dbg.o common_dbg.o
 	${CC} -o cv_simple_dbg cv_simple_dbg.o common_dbg.o ${LINKIN}
 
-#--- Target :: cv_simple_noprintf
+cv_simple_dbg_tsan.o: cv_simple.c
+	${CL} ${CFLAGS_DBG_TSAN} -c cv_simple.c -o cv_simple_dbg_tsan.o
+cv_simple_dbg_tsan: cv_simple_dbg_tsan.o common_dbg_tsan.o
+	${CL} ${CFLAGS_DBG_TSAN} -o cv_simple_dbg_tsan cv_simple_dbg_tsan.o common_dbg_tsan.o ${LINKIN}
+
+#--- Target :: cv_simple_noprintf ; no printf's used, so that cry-baby helgrind stays happy
 cv_simple_noprintf.o: cv_simple_noprintf.c
 	${CC} ${CFLAGS} -c cv_simple_noprintf.c -o cv_simple_noprintf.o
 cv_simple_noprintf: common.o cv_simple_noprintf.o
