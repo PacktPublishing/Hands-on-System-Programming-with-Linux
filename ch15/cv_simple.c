@@ -124,7 +124,7 @@ int main(void)
 	pthread_mutex_destroy(&mycv_mutex);
 	pthread_cond_destroy(&mycv);
 
-	pthread_exit(NULL);
+	exit(EXIT_SUCCESS);
 }
 
 /* vi: ts=8 */
