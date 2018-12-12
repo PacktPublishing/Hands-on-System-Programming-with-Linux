@@ -92,11 +92,12 @@ int main(int argc, char **argv)
 		if (show_vars)
 			WORK_ON_MEM(CHILD, loc, g);
 
+		free(gptr);
 		printf("Child (%d) done, exiting ...\n", getpid());
 		exit(EXIT_SUCCESS);
 	default:		/* Parent */
 #if 1
-		sleep(2);	/* let the child run first */
+		sleep(2);	/* let the child run first (silly way) */
 #endif
 		printf("\nParent process, PID %d:\n", getpid());
 
