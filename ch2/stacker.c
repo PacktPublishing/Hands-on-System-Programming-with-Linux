@@ -10,9 +10,15 @@
  * From:
  *  Ch 2 : Virtual Memory
  ****************************************************************
+ * Updates:
+ * 20181226: to 'show' a good approximation of the stack location, display
+ * the address of a local variable (which of course is on the stack).
+ * (Thanks to F Ritchie for pointing this out!).
+ *
  * Brief Description:
  * A simple demo: we make several nested function calls, just so we
  * can use GDB to attach to the process and query it's process stack.
+ *
  * For details, please refer the book, Ch 2.
  */
 #define _GNU_SOURCE
@@ -24,8 +30,11 @@
 
 static void bar_is_now_closed(void)
 {
-	printf("In function %s\n"
-		"\t(bye, pl go '~/' now).\n", __FUNCTION__);
+	int localvar = 5;
+
+	printf("In function %20s; &localvar = %p\n"
+		"\t(bye, pl go '~/' now).\n",
+		__FUNCTION__, &localvar);
 	printf("\n Now blocking on pause()...\n"
 		" Connect via GDB's 'attach' and then issue the 'bt' command"
 		" to view the process stack\n");
@@ -33,18 +42,24 @@ static void bar_is_now_closed(void)
 }
 static void bar(void)
 {
-	printf("In function %s\n", __FUNCTION__);
+	int localvar = 5;
+
+	printf("In function %20s; &localvar = %p\n", __FUNCTION__, &localvar);
 	bar_is_now_closed();
 }
 static void foo(void)
 {
-	printf("In function %s\n", __FUNCTION__);
+	int localvar = 5;
+
+	printf("In function %20s; &localvar = %p\n", __FUNCTION__, &localvar);
 	bar();
 }
 
 int main(int argc, char **argv)
 {
-	printf("In function %s\n", __FUNCTION__);
+	int localvar = 5;
+
+	printf("In function %20s; &localvar = %p\n", __FUNCTION__, &localvar);
 	foo();
 	exit (EXIT_SUCCESS);
 }
