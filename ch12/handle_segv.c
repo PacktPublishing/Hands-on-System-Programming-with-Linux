@@ -201,13 +201,7 @@ int main(int argc, char **argv)
 	}
 
 	/*Setting up the alternate stack to properly handle the SIGSEGV*/
-	if( setup_altsigstack(SIGNAL_STACK_SIZE) < 0) {
-		/*In case stack setting is failed,
-		 * let's continue with the default settings*/
-		act.sa_flags = SA_RESTART | SA_SIGINFO;
-	}else {
-		act.sa_flags = SA_RESTART | SA_SIGINFO | SA_ONSTACK ;
-	}
+	setup_altsigstack(SIGNAL_STACK_SIZE);
 
 	memset(&act, 0, sizeof(act));
 	act.sa_sigaction = myfault;
