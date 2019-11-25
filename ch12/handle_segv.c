@@ -31,6 +31,7 @@
 #include <string.h>
 #include <ctype.h>
 #include "../common.h"
+#include "signal_helper.h"
 
 /*---------------- Typedef's, constants, etc ------------------------*/
 typedef unsigned int u32;
@@ -38,6 +39,8 @@ typedef long unsigned int u64;
 
 /*---------------- Macros -------------------------------------------*/
 #define APPNAME "handle_segv"
+
+#define SIGNAL_STACK_SIZE 8192 /* Change this as per the signal handler*/
 
 #define ADDR_FMT "%lx"
 #if __x86_64__   /* 64-bit; __x86_64__ works for gcc */
@@ -197,9 +200,17 @@ int main(int argc, char **argv)
 		exit(1);
 	}
 
+	/*Setting up the alternate stack to properly handle the SIGSEGV*/
+	if( setup_altsigstack(SIGNAL_STACK_SIZE) < 0) {
+		/*In case stack setting is failed,
+		 * let's continue with the default settings*/
+		act.sa_flags = SA_RESTART | SA_SIGINFO;
+	}else {
+		act.sa_flags = SA_RESTART | SA_SIGINFO | SA_ONSTACK ;
+	}
+
 	memset(&act, 0, sizeof(act));
 	act.sa_sigaction = myfault;
-	act.sa_flags = SA_RESTART | SA_SIGINFO;
 	sigemptyset(&act.sa_mask);
 	if (sigaction(SIGSEGV, &act, 0) == -1)
 		FATAL("sigaction SIGSEGV failed\n");
