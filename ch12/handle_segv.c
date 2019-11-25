@@ -205,6 +205,7 @@ int main(int argc, char **argv)
 
 	memset(&act, 0, sizeof(act));
 	act.sa_sigaction = myfault;
+	act.sa_flags = SA_RESTART | SA_SIGINFO | SA_ONSTACK ;
 	sigemptyset(&act.sa_mask);
 	if (sigaction(SIGSEGV, &act, 0) == -1)
 		FATAL("sigaction SIGSEGV failed\n");
