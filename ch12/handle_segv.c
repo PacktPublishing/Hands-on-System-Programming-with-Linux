@@ -40,7 +40,11 @@ typedef long unsigned int u64;
 /*---------------- Macros -------------------------------------------*/
 #define APPNAME "handle_segv"
 
-#define SIGNAL_STACK_SIZE 8192 /* Change this as per the signal handler*/
+#if __x86_64__
+ #define SIGNAL_STACK_SIZE (1024*1024*8) /*Setting stack size to defaule(8M)*/
+#else
+ #define SIGNAL_STACK_SIZE (1024*1024*2) /*(2M)*/
+#endif
 
 #define ADDR_FMT "%lx"
 #if __x86_64__   /* 64-bit; __x86_64__ works for gcc */
@@ -205,7 +209,7 @@ int main(int argc, char **argv)
 
 	memset(&act, 0, sizeof(act));
 	act.sa_sigaction = myfault;
-	act.sa_flags = SA_RESTART | SA_SIGINFO | SA_ONSTACK ;
+	act.sa_flags = SA_RESTART | SA_SIGINFO | SA_ONSTACK;
 	sigemptyset(&act.sa_mask);
 	if (sigaction(SIGSEGV, &act, 0) == -1)
 		FATAL("sigaction SIGSEGV failed\n");
