@@ -25,14 +25,14 @@
 static void bar(unsigned int nsec)
 {
 	printf(" %s:%s :: will take a nap for %us ...\n",
-	       __FILE__, __FUNCTION__, nsec);
+	       __FILE__, __func__, nsec);
 	sleep(nsec);
 }
 
 static void foo(unsigned int nsec)
 {
 	printf(" %s:%s :: will take a nap for %us ...\n",
-	       __FILE__, __FUNCTION__, nsec);
+	       __FILE__, __func__, nsec);
 	sleep(nsec);
 }
 

@@ -46,7 +46,7 @@ static void work_on_file(int whom, int fd)
 	if (!buf)
 		FATAL("malloc failed\n");
 
-	printf(" in %s:%s now...\n", __FILE__, __FUNCTION__);
+	printf(" in %s:%s now...\n", __FILE__, __func__);
 
 	if (whom == CHILD) {
 		/* Seek to offset 10, write 'numlines' lines of 'c's ... */

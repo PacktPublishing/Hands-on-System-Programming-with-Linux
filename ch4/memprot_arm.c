@@ -53,7 +53,7 @@ static void test_mem(void *ptr, int write_on_ro_mem)
 	int byte = random() % gPgsz;
 	char *start_off = (char *)ptr + byte;
 
-	printf("\n----- %s() -----\n", __FUNCTION__);
+	printf("\n----- %s() -----\n", __func__);
 
 	/* Page 0 : rw [default] mem protection */
 	if (okornot[0] == 1) {
@@ -100,7 +100,7 @@ static void protect_mem(void *ptr)
 		PROT_READ | PROT_WRITE | PROT_EXEC, PROT_NONE
 	};
 
-	printf("----- %s() -----\n", __FUNCTION__);
+	printf("----- %s() -----\n", __func__);
 	memset(okornot, 0, sizeof(okornot));
 
 	/* Loop over each page, setting protections as required */

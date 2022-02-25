@@ -38,11 +38,11 @@ int r_sleep(time_t sec, long nsec);
 
 #define WARN(warnmsg, args...) do {                           \
 	handle_err(NON_FATAL, "!WARNING! %s:%s:%d: " warnmsg, \
-	   __FILE__, __FUNCTION__, __LINE__, ##args);         \
+	   __FILE__, __func__, __LINE__, ##args);         \
 } while(0)
 #define FATAL(errmsg, args...) do {                           \
 	handle_err(EXIT_FAILURE, "FATAL:%s:%s:%d: " errmsg,   \
-	   __FILE__, __FUNCTION__, __LINE__, ##args);         \
+	   __FILE__, __func__, __LINE__, ##args);         \
 } while(0)
 
 /*------------------------ DELAY_LOOP --------------------------------*/
@@ -93,7 +93,7 @@ static inline void beep(int what)
 #define VPRINT(msg, args...) do {                      \
 	if (gVerbose)                                  \
 		printf("%s:%s:%d: " msg,               \
-	   __FILE__, __FUNCTION__, __LINE__, ##args);  \
+	   __FILE__, __func__, __LINE__, ##args);  \
 } while(0)
 
 /*------------------------ timerspecsub ----------------------------------*/

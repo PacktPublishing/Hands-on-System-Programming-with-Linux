@@ -187,7 +187,7 @@ static void bug1(void)
 	ADDR_TYPE *ptr = &bug1;
 	printf("%s:%s: bug1=%p\n"
 		"Now attempting to write to text (&bug1) ...\n",
-			__FILE__, __FUNCTION__, bug1);
+			__FILE__, __func__, bug1);
 	*(ptr) = 0x2A;
 }
 

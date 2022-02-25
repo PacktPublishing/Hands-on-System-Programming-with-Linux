@@ -34,7 +34,7 @@ static void bar_is_now_closed(void)
 
 	printf("In function %20s; &localvar = %p\n"
 		"\t(bye, pl go '~/' now).\n",
-		__FUNCTION__, &localvar);
+		__func__, &localvar);
 	printf("\n Now blocking on pause()...\n"
 		" Connect via GDB's 'attach' and then issue the 'bt' command"
 		" to view the process stack\n");
@@ -44,14 +44,14 @@ static void bar(void)
 {
 	int localvar = 5;
 
-	printf("In function %20s; &localvar = %p\n", __FUNCTION__, &localvar);
+	printf("In function %20s; &localvar = %p\n", __func__, &localvar);
 	bar_is_now_closed();
 }
 static void foo(void)
 {
 	int localvar = 5;
 
-	printf("In function %20s; &localvar = %p\n", __FUNCTION__, &localvar);
+	printf("In function %20s; &localvar = %p\n", __func__, &localvar);
 	bar();
 }
 
@@ -59,7 +59,7 @@ int main(int argc, char **argv)
 {
 	int localvar = 5;
 
-	printf("In function %20s; &localvar = %p\n", __FUNCTION__, &localvar);
+	printf("In function %20s; &localvar = %p\n", __func__, &localvar);
 	foo();
 	exit (EXIT_SUCCESS);
 }

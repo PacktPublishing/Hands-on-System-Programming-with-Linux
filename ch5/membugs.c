@@ -94,7 +94,7 @@ static void leakage_case2(size_t size, unsigned int reps)
 	mem_leaked = size * reps;
 	printf("%s(): will now leak a total of %.0f bytes (%.2f MB)"
 			" [%zu bytes * %u loops]\n",
-			__FUNCTION__, mem_leaked, mem_leaked/(1024*1024),
+			__func__, mem_leaked, mem_leaked/(1024*1024),
 			size, reps);
 
 	if (mem_leaked >= threshold)
@@ -102,7 +102,7 @@ static void leakage_case2(size_t size, unsigned int reps)
 
 	for (i=0; i<reps; i++) {
 		if (i%10000 == 0)
-			printf("%s():%6d:malloc(%zu)\n", __FUNCTION__, i, size);
+			printf("%s():%6d:malloc(%zu)\n", __func__, i, size);
 		amleaky(size);
 	}
 
@@ -115,7 +115,7 @@ static void leakage_case2(size_t size, unsigned int reps)
 static void leakage_case1(size_t size)
 {
 	printf("%s(): will now leak %zu bytes (%ld MB)\n",
-			__FUNCTION__, size, size/(1024*1024));
+			__func__, size, size/(1024*1024));
 	amleaky(size);
 }
 
@@ -126,7 +126,7 @@ static void doublefree(int cond)
 	char name[]="Hands-on Linux Sys Prg";
 	int n=512;
 
-	printf("%s(): cond %d\n", __FUNCTION__, cond);
+	printf("%s(): cond %d\n", __func__, cond);
 	ptr = malloc(n);
 	if (!ptr)
 		FATAL("malloc failed\n");
@@ -137,7 +137,7 @@ static void doublefree(int cond)
 		bogus = malloc(-1UL); /* will fail! */
 		if (!bogus) {
 			fprintf(stderr, "%s:%s:%d: malloc failed\n",
-			   __FILE__, __FUNCTION__, __LINE__);
+			   __FILE__, __func__, __LINE__);
 			free(ptr); /* Bug: double-free */
 			exit(EXIT_FAILURE);
 		}
@@ -167,7 +167,7 @@ static void uaf(void)
 		FATAL("malloc arr failed\n");
 	memset(arr, 'a', n);
 	arr[n-1]='\0';
-	printf("%s():%d: arr = %p:%.*s\n", __FUNCTION__, __LINE__, arr, 32, arr);
+	printf("%s():%d: arr = %p:%.*s\n", __func__, __LINE__, arr, 32, arr);
 
 	next = malloc(n);
 	if (!next) {
@@ -179,7 +179,7 @@ static void uaf(void)
 	free(arr);
 	strncpy(arr, name, strlen(name)); /* Bug: UAF */
 
-	printf("%s():%d: arr = %p:%.*s\n", __FUNCTION__, __LINE__, arr, 32, arr);
+	printf("%s():%d: arr = %p:%.*s\n", __func__, __LINE__, arr, 32, arr);
 	free(next);
 }
 
@@ -188,7 +188,7 @@ static void read_underflow(int cond)
 {
 	char *dest, src[] = "abcd56789", *orig;
 
-	printf("%s(): cond %d\n", __FUNCTION__, cond);
+	printf("%s(): cond %d\n", __func__, cond);
 	dest = malloc(25);
 	if (!dest)
 		FATAL("malloc failed\n");

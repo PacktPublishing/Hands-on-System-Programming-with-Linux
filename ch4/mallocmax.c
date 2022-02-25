@@ -34,7 +34,7 @@ static void max_malloc(void)
 	int szt = sizeof(size_t);
 	float max = 0;
 
-	printf("*** %s() ***\n", __FUNCTION__);
+	printf("*** %s() ***\n", __func__);
 	max = pow(2, szt * 8);
 	printf("sizeof size_t = %u; "
 	       "max value of the param to malloc = %.0f\n", szt, max);
@@ -54,7 +54,7 @@ static void negative_malloc(void)
 	short int sd_num2alloc;
 	void *ptr;
 
-	printf("*** %s() ***\n", __FUNCTION__);
+	printf("*** %s() ***\n", __func__);
 
 	max = pow(2, szt * 8);
 	printf("size_t max    = %.0f\n", max);
