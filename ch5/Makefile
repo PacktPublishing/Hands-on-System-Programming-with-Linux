@@ -20,7 +20,7 @@
 ## as desired. We have deliberately not kept the sanitizer targets; add
 ## them to the 'ALL := ' statement if you wish to build them by default.
 
-ALL :=  membugs membugs_dbg membugs_dbg_asan membugs_dbg_ub membugs_dbg_msan
+ALL :=  membugs membugs_dbg membugs_dbg_asan membugs_dbg_ub
 
 CC=${CROSS_COMPILE}gcc
 CL=${CROSS_COMPILE}clang
