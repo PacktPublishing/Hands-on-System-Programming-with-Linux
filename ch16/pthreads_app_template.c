@@ -47,6 +47,10 @@ static void *worker(void *msg)
 {
 	struct stToThread *pstToThread = (struct stToThread *)msg;
 	assert(pstToThread);
+	
+	// init ... can disable cancellation here
+	// ...
+	// can enable cancellation here
 
 	/* Install a 'cleanup handler' routine */
 	pthread_cleanup_push(cleanup_handler, pstToThread);

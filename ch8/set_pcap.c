@@ -31,6 +31,7 @@
 #include <sys/types.h>
 #include <sys/capability.h>
 #include <signal.h>
+#include <assert.h>
 #include "../common.h"
 
 static void boing(int sig)
@@ -58,7 +59,7 @@ static void drop_caps_be_normal(void)
 
 static void test_setuid(void)
 {
-	printf("%s:\nRUID = %d EUID = %d\n", __FUNCTION__, getuid(), geteuid());
+	printf("%s:\nRUID = %d EUID = %d\n", __func__, getuid(), geteuid());
 	if (seteuid(0) == -1)
 		WARN("seteuid(0) failed...\n");
 	printf("RUID = %d EUID = %d\n", getuid(), geteuid());
@@ -77,7 +78,7 @@ static void usage(char **argv, int stat)
 int main(int argc, char **argv)
 {
 	int opt, ncap;
-	cap_t mycaps;
+	cap_t mycaps = cap_init();
 	cap_value_t caps2set[2];
 
 	if (argc < 2)
@@ -101,7 +102,9 @@ int main(int argc, char **argv)
 			FATAL
 			    ("CAP_SYS_ADMIN capability not supported on system, aborting...\n");
 	}
+
 	//--- Set the required capabilities in the Thread Eff capset
+	assert(mycaps != NULL);
 	mycaps = cap_get_proc();
 	if (!mycaps)
 		FATAL("cap_get_proc() for CAP_SETUID failed, aborting...\n");

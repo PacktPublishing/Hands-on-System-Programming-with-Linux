@@ -16,12 +16,13 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/capability.h>
+#include <assert.h>
 #include "../common.h"
 
 int main(int argc, char **argv)
 {
 	pid_t pid;
-	cap_t pcaps;
+	cap_t pcaps = cap_init();
 	char *caps_text = NULL;
 
 	if (argc < 2) {
@@ -29,6 +30,7 @@ int main(int argc, char **argv)
 			" PID: process to query capabilities of\n", argv[0]);
 		exit(EXIT_FAILURE);
 	}
+	assert (pcaps != NULL);
 	pid = atoi(argv[1]);
 
 #if 0
