@@ -28,7 +28,7 @@ CL=${CROSS_COMPILE}clang
 CFLAGS=-O2 -Wall -UDEBUG
 CFLAGS_DBG=-g -ggdb -gdwarf-4 -O0 -Wall -Wextra -DDEBUG
 CFLAGS_DBG_ASAN=${CFLAGS_DBG} -fsanitize=address
-CFLAGS_DBG_MSAN=${CFLAGS_DBG} -fsanitize=memory
+#CFLAGS_DBG_MSAN=${CFLAGS_DBG} -fsanitize=memory
 CFLAGS_DBG_UB=${CFLAGS_DBG} -fsanitize=undefined
 
 LINKIN :=
@@ -45,11 +45,11 @@ common_dbg.o: ../common.c ../common.h
 
  #--- Sanitizers (use clang): common_dbg_*
 common_dbg_asan.o: ../common.c ../common.h
-	${CL} ${CFLAGS_DBG_ASAN} -c ../common.c -o common_dbg_asan.o
+	${CC} ${CFLAGS_DBG_ASAN} -c ../common.c -o common_dbg_asan.o
 common_dbg_ub.o: ../common.c ../common.h
-	${CL} ${CFLAGS_DBG_UB} -c ../common.c -o common_dbg_ub.o
-common_dbg_msan.o: ../common.c ../common.h
-	${CL} ${CFLAGS_DBG_MSAN} -c ../common.c -o common_dbg_msan.o
+	${CC} ${CFLAGS_DBG_UB} -c ../common.c -o common_dbg_ub.o
+#common_dbg_msan.o: ../common.c ../common.h
+#	${CC} ${CFLAGS_DBG_MSAN} -c ../common.c -o common_dbg_msan.o
 
 #--- Target :: membugs
 membugs.o: membugs.c
@@ -69,14 +69,14 @@ membugs_dbg_asan: membugs_dbg_asan.o common_dbg_asan.o
 	${CL} ${CFLAGS_DBG_ASAN} -o membugs_dbg_asan membugs_dbg_asan.o common_dbg_asan.o ${LINKIN}
 
 membugs_dbg_ub.o: membugs.c
-	${CL} ${CFLAGS_DBG_UB} -c membugs.c -o membugs_dbg_ub.o
+	${CC} ${CFLAGS_DBG_UB} -c membugs.c -o membugs_dbg_ub.o
 membugs_dbg_ub: membugs_dbg_ub.o common_dbg_ub.o
-	${CL} ${CFLAGS_DBG_UB} -o membugs_dbg_ub membugs_dbg_ub.o common_dbg_ub.o ${LINKIN}
+	${CC} ${CFLAGS_DBG_UB} -o membugs_dbg_ub membugs_dbg_ub.o common_dbg_ub.o ${LINKIN}
 
-membugs_dbg_msan.o: membugs.c
-	${CL} ${CFLAGS_DBG_MSAN} -c membugs.c -o membugs_dbg_msan.o
-membugs_dbg_msan: membugs_dbg_msan.o common_dbg_msan.o
-	${CL} ${CFLAGS_DBG_MSAN} -o membugs_dbg_msan membugs_dbg_msan.o common_dbg_msan.o ${LINKIN}
+#membugs_dbg_msan.o: membugs.c
+#	${CC} ${CFLAGS_DBG_MSAN} -c membugs.c -o membugs_dbg_msan.o
+#membugs_dbg_msan: membugs_dbg_msan.o common_dbg_msan.o
+#	${CC} ${CFLAGS_DBG_MSAN} -o membugs_dbg_msan membugs_dbg_msan.o common_dbg_msan.o ${LINKIN}
 
 
 # indent- "beautifies" C code into the "Linux kernel style".

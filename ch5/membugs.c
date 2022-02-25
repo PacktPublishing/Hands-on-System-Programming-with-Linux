@@ -279,6 +279,17 @@ static void write_overflow_compilemem(void)
 	}
 }
 
+/* [update] test case 14 : global memory write overflow test case */
+static int garr[5];
+static void write_overflow_globalmem(void)
+{
+   int i, arr[5];
+
+   for (i = 0; i <= 5; i++) {
+       garr[i] = 100;  /* Bug: 'garr' overflows on i==5 */
+   }
+}
+
 /* test case 1 : uninitialized var test case */
 static void uninit_var()
 {
@@ -307,6 +318,7 @@ static void usage(char *name)
 		" test case 11 : memory leak test case 1: simple leak\n"
 		" test case 12 : memory leak test case 2: leak more (in a loop)\n"
 		" test case 13 : memory leak test case 3: \"lib\" API leak\n"
+		" test case 14 : out-of-bounds : write overflow [on global memory] [update]\n"
 		"-h | --help : show this help screen\n", name);
 }
 
@@ -370,6 +382,9 @@ static void process_args(int argc, char **argv)
 		case 13:
 			leakage_case3(0);
 			leakage_case3(1);
+			break;
+		case 14:
+			write_overflow_globalmem();
 			break;
 		default:
 			usage(argv[0]);
