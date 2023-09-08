@@ -79,6 +79,10 @@ int main(int argc, char **argv)
 	pthread_attr_init(&attr);
 	pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_JOINABLE);
 
+	/* TODO !
+	 * Should set the max per thread stack size... this can be critical!
+	 */
+
 	/* Thread creation loop */
 	for (i = 0; i < NTHREADS; i++) {
 		ToThread[i] = calloc(1, sizeof(struct stToThread));
