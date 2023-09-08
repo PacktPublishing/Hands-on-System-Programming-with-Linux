@@ -1,0 +1,11 @@
+#!/bin/bash
+# Update PRG to run pther variations
+PRG=membugs_dbg_asan
+
+for tc in $(seq 1 14)
+do
+	echo "-----------------------------------------------------------------------
+>>> Test Case #$tc
+-----------------------------------------------------------------------"
+	./${PRG} ${tc}
+done
