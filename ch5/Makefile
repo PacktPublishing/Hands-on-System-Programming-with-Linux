@@ -31,7 +31,7 @@ CFLAGS_DBG_ASAN=${CFLAGS_DBG} -fsanitize=address -fsanitize-address-use-after-sc
 #CFLAGS_DBG_MSAN=${CFLAGS_DBG} -fsanitize=memory
 CFLAGS_DBG_UB=${CFLAGS_DBG} -fsanitize=undefined
 
-LINKIN :=
+LINKIN := -static-libasan
  # user will need to explicitly set libraries to link in as required;
  # f.e. -lrt -pthread
 
