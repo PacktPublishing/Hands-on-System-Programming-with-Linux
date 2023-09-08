@@ -27,7 +27,7 @@ CL=${CROSS_COMPILE}clang
 
 CFLAGS=-O2 -Wall -UDEBUG
 CFLAGS_DBG=-g -ggdb -gdwarf-4 -O0 -Wall -Wextra -DDEBUG
-CFLAGS_DBG_ASAN=${CFLAGS_DBG} -fsanitize=address
+CFLAGS_DBG_ASAN=${CFLAGS_DBG} -fsanitize=address -fsanitize-address-use-after-scope
 #CFLAGS_DBG_MSAN=${CFLAGS_DBG} -fsanitize=memory
 CFLAGS_DBG_UB=${CFLAGS_DBG} -fsanitize=undefined
 
@@ -64,9 +64,11 @@ membugs_dbg: membugs_dbg.o common_dbg.o
 
  #--- Sanitizers for membugs :: (use clang): <foo>_dbg_[asan|ub|msan]
 membugs_dbg_asan.o: membugs.c
-	${CL} ${CFLAGS_DBG_ASAN} -c membugs.c -o membugs_dbg_asan.o
+	${CC} ${CFLAGS_DBG_ASAN} -c membugs.c -o membugs_dbg_asan.o
+	#${CL} ${CFLAGS_DBG_ASAN} -c membugs.c -o membugs_dbg_asan.o
 membugs_dbg_asan: membugs_dbg_asan.o common_dbg_asan.o
-	${CL} ${CFLAGS_DBG_ASAN} -o membugs_dbg_asan membugs_dbg_asan.o common_dbg_asan.o ${LINKIN}
+	${CC} ${CFLAGS_DBG_ASAN} -o membugs_dbg_asan membugs_dbg_asan.o common_dbg_asan.o ${LINKIN}
+	#${CL} ${CFLAGS_DBG_ASAN} -o membugs_dbg_asan membugs_dbg_asan.o common_dbg_asan.o ${LINKIN}
 
 membugs_dbg_ub.o: membugs.c
 	${CC} ${CFLAGS_DBG_UB} -c membugs.c -o membugs_dbg_ub.o
