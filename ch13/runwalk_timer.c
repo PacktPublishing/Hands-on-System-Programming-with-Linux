@@ -85,7 +85,11 @@ static inline void BUZZ(char *msg)
 	 * vibrate it, make a sound, etc! */
 }
 
+#if 1
 static void its_time(int signum, siginfo_t *si, void *uctx)
+#else
+static void its_time(union sigval sv)
+#endif
 {
 	// Gain access to our app context
 	volatile sRunWalk *ps = (sRunWalk *)si->si_value.sival_ptr;
@@ -138,8 +142,13 @@ static void runwalk_timer_init_and_arm(sRunWalk * ps)
 	ps->type = RUN;
 	ps->itmrspec->it_value.tv_sec = ps->trun;
 
+#if 1
 	runwalk_evp.sigev_notify = SIGEV_SIGNAL;
 	runwalk_evp.sigev_signo = SIGRTMIN;
+#else
+	runwalk_evp.sigev_notify = SIGEV_THREAD;
+	runwalk_evp.sigev_notify_function = its_time;
+#endif
 	// Pass along the app context structure pointer
 	runwalk_evp.sigev_value.sival_ptr = ps;
 
@@ -155,7 +164,7 @@ static void runwalk_timer_init_and_arm(sRunWalk * ps)
 static void bye(int signum)
 {
 	char *saybye = "\n+++ Good job, bye! +++\n";
-	write(STDOUT_FILENO, saybye, strlen(saybye));
+	(void)write(STDOUT_FILENO, saybye, strlen(saybye));
 	exit(EXIT_SUCCESS);
 }
 
