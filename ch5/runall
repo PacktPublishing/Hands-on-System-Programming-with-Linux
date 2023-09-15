@@ -2,6 +2,11 @@
 # Update PRG to run pther variations
 PRG=membugs_dbg_asan
 
+[[ ! -x ${PRG} ]] && {
+	echo "Program \"${PRG}\" not built?"
+	exit 1
+}
+
 for tc in $(seq 1 14)
 do
 	echo "-----------------------------------------------------------------------
