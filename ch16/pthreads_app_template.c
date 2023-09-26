@@ -25,6 +25,7 @@
 #include "../common.h"
 
 #define NTHREADS	3
+#define PTHREAD_STACK	(8*1024*1024)
 
 struct stToThread {
 	int thrdnum;
@@ -75,13 +76,28 @@ int main(int argc, char **argv)
 	pthread_attr_t attr;
 	void *stat=0;
 
+#if 0
+	/* RT apps: lock memory */
+	printf("RT app: lock memory\n");
+	if (mlockall(MCL_CURRENT | MCL_FUTURE) == -1) {
+		fprintf(stderr, "mlockall failed: %m\n");
+		exit(-2);
+	}
+#endif
+
 	/* Init the thread attribute structure to defaults */
 	pthread_attr_init(&attr);
 	pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_JOINABLE);
 
-	/* TODO !
-	 * Should set the max per thread stack size... this can be critical!
+	/* Set a specific stack size; PTHREAD_STACK_MIN is only 16 KB, so lets
+	 * make it larger (8 MB)
 	 */
+	printf("Set pthread stack size to %d MB\n", PTHREAD_STACK/(1024*1024));
+	ret = pthread_attr_setstacksize(&attr, PTHREAD_STACK);
+	if (ret) {
+		fprintf(stderr, "pthread setstacksize failed [%d]\n", ret);
+		exit(EXIT_FAILURE);
+	}
 
 	/* Thread creation loop */
 	for (i = 0; i < NTHREADS; i++) {
