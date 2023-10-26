@@ -171,13 +171,41 @@ static void myfault(int signum, siginfo_t * si, void *ucontext)
 	 *  crashed_inform_enduser();
 	 *
 	 * Now have the kernel generate the core dump by:
-	 *  Reset the SIGSEGV to glibc default, and,
+	 *  Reset the SIGSEGV to kernel default, and,
 	 *  Re-raise it!
 	 */
 	if (signal(SIGSEGV, SIG_DFL) == SIG_ERR)
 		FATAL("signal -reverting SIGSEGV to default- failed");
 	if (raise(SIGSEGV))
 		FATAL("raise SIGSEGV failed");
+}
+
+/**
+ * setup_altsigstack - Helper function to set alternate stack for sig-handler
+ * @stack_sz:	required stack size
+ *
+ * Return: 0 on success, -ve errno on failure
+ */
+int setup_altsigstack(size_t stack_sz)
+{
+	stack_t ss;
+
+	printf("Alternate signal stack size = %zu bytes\n", stack_sz);
+	ss.ss_sp = malloc(stack_sz);
+	if (!ss.ss_sp){
+		printf("malloc(%zu) for alt sig stack failed\n", stack_sz);
+		return -ENOMEM;
+	}
+
+	ss.ss_size = stack_sz;
+	ss.ss_flags = 0;
+	if (sigaltstack(&ss, NULL) == -1){
+		printf("sigaltstack for size %zu failed!\n", stack_sz);
+		return -errno;
+	}
+	//printf("Alt signal stack uva (user virt addr) = %p\n", ss.ss_sp);
+
+	return 0;
 }
 
 static void usage(char *nm)
@@ -194,6 +222,21 @@ int main(int argc, char **argv)
 
 	if (argc != 3) {
 		usage(argv[0]);
+		exit(1);
+	}
+
+	/* Use a separate stack for signal handling via the SA_ONSTACK;
+	 * This is critical, especially for handling the SIGSEGV; think on it, what
+	 * if this process crashes due to stack overflow; then it will receive the
+	 * SIGSEGV from the kernel (when it attempts to eat into unmapped memory
+	 * following the limit, the end of the stack)! The SIGSEGV signal handler
+	 * must now run. But where? It cannot on the old stack - it's now corrupt!
+	 * Hence, the need for an alternate signal stack !
+	 * Here, just as an example, we allocate 10 MB for the alt signal stack.
+	 */
+	printf("Setting up an alternate signal stack now...\n");
+	if (setup_altsigstack(10*1024*1024) < 0) {
+		fprintf(stderr, "%s: setting up alt sig stack failed\n", argv[0]);
 		exit(1);
 	}
 
@@ -231,5 +274,4 @@ int main(int argc, char **argv)
 		usage(argv[0]);
 	exit(0);
 }
-
 /* vi: ts=8 */
