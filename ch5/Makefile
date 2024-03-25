@@ -7,6 +7,9 @@
 #
 # From: Ch 5 : Linux Memory Issues
 #----------------------------------------------------------------------
+# Update(s):
+#  We check for clang; if installed, we use it, else we use GCC
+#
 #  ASSUMPTIONS ::
 #   1. the convenience files ../common.h and ../common.c
 #      are present
@@ -20,22 +23,30 @@
 ## as desired. We have deliberately not kept the sanitizer targets; add
 ## them to the 'ALL := ' statement if you wish to build them by default.
 
-ALL :=  membugs membugs_dbg membugs_dbg_asan membugs_dbg_ub
-
-CC=${CROSS_COMPILE}gcc
-CL=${CROSS_COMPILE}clang
+ALL := membugs membugs_dbg membugs_dbg_asan membugs_dbg_ub membugs_dbg_msan membugs_dbg_lsan
 
 CFLAGS=-O2 -Wall -UDEBUG
 CFLAGS_DBG=-g -ggdb -gdwarf-4 -O0 -Wall -Wextra -DDEBUG
 CFLAGS_DBG_ASAN=${CFLAGS_DBG} -fsanitize=address -fsanitize-address-use-after-scope
-#CFLAGS_DBG_MSAN=${CFLAGS_DBG} -fsanitize=memory
+CFLAGS_DBG_MSAN=${CFLAGS_DBG} -fsanitize=memory -fPIE -pie
 CFLAGS_DBG_UB=${CFLAGS_DBG} -fsanitize=undefined
+CFLAGS_DBG_LSAN=${CFLAGS_DBG} -fsanitize=leak
 
 LINKIN := -static-libasan
  # user will need to explicitly set libraries to link in as required;
  # f.e. -lrt -pthread
 
 all: ${ALL}
+# GCC doesn't support MSAN, clang does
+CC := gcc
+ifeq (, $(shell which clang))
+ $(warning === WARNING! No clang (compiler) in PATH (reqd for MSAN); consider doing 'sudo apt install clang' ===)
+else
+ CC := clang
+ LINKIN := -static-libsan
+endif
+$(info Compiler set to $(CC))
+
 CB_FILES := *.[ch]
 
 common.o: ../common.c ../common.h
@@ -48,8 +59,10 @@ common_dbg_asan.o: ../common.c ../common.h
 	${CC} ${CFLAGS_DBG_ASAN} -c ../common.c -o common_dbg_asan.o
 common_dbg_ub.o: ../common.c ../common.h
 	${CC} ${CFLAGS_DBG_UB} -c ../common.c -o common_dbg_ub.o
-#common_dbg_msan.o: ../common.c ../common.h
-#	${CC} ${CFLAGS_DBG_MSAN} -c ../common.c -o common_dbg_msan.o
+common_dbg_msan.o: ../common.c ../common.h
+	${CC} ${CFLAGS_DBG_MSAN} -c ../common.c -o common_dbg_msan.o
+common_dbg_lsan.o: ../common.c ../common.h
+	${CC} ${CFLAGS_DBG_LSAN} -c ../common.c -o common_dbg_lsan.o
 
 #--- Target :: membugs
 membugs.o: membugs.c
@@ -65,21 +78,29 @@ membugs_dbg: membugs_dbg.o common_dbg.o
  #--- Sanitizers for membugs :: (use clang): <foo>_dbg_[asan|ub|msan]
 membugs_dbg_asan.o: membugs.c
 	${CC} ${CFLAGS_DBG_ASAN} -c membugs.c -o membugs_dbg_asan.o
-	#${CL} ${CFLAGS_DBG_ASAN} -c membugs.c -o membugs_dbg_asan.o
 membugs_dbg_asan: membugs_dbg_asan.o common_dbg_asan.o
-	${CC} ${CFLAGS_DBG_ASAN} -o membugs_dbg_asan membugs_dbg_asan.o common_dbg_asan.o ${LINKIN}
-	#${CL} ${CFLAGS_DBG_ASAN} -o membugs_dbg_asan membugs_dbg_asan.o common_dbg_asan.o ${LINKIN}
+	${CC} ${CFLAGS_DBG_ASAN} -o membugs_dbg_asan membugs_dbg_asan.o common_dbg_asan.o
 
 membugs_dbg_ub.o: membugs.c
 	${CC} ${CFLAGS_DBG_UB} -c membugs.c -o membugs_dbg_ub.o
 membugs_dbg_ub: membugs_dbg_ub.o common_dbg_ub.o
 	${CC} ${CFLAGS_DBG_UB} -o membugs_dbg_ub membugs_dbg_ub.o common_dbg_ub.o ${LINKIN}
 
-#membugs_dbg_msan.o: membugs.c
-#	${CC} ${CFLAGS_DBG_MSAN} -c membugs.c -o membugs_dbg_msan.o
-#membugs_dbg_msan: membugs_dbg_msan.o common_dbg_msan.o
-#	${CC} ${CFLAGS_DBG_MSAN} -o membugs_dbg_msan membugs_dbg_msan.o common_dbg_msan.o ${LINKIN}
+membugs_dbg_msan.o: membugs.c
+ifeq (gcc, $(CC))
+	$(error === ERROR! No clang (compiler) in PATH (reqd for MSAN); consider doing 'sudo apt install clang' ===)
+endif
+	${CC} ${CFLAGS_DBG_MSAN} -c membugs.c -o membugs_dbg_msan.o
+membugs_dbg_msan: membugs_dbg_msan.o common_dbg_msan.o
+ifeq (gcc, $(CC))
+	$(error === ERROR! No clang (compiler) in PATH (reqd for MSAN); consider doing 'sudo apt install clang' ===)
+endif
+	${CC} ${CFLAGS_DBG_MSAN} -o membugs_dbg_msan membugs_dbg_msan.o common_dbg_msan.o
 
+membugs_dbg_lsan.o: membugs.c
+	${CC} ${CFLAGS_DBG_LSAN} -c membugs.c -o membugs_dbg_lsan.o
+membugs_dbg_lsan: membugs_dbg_lsan.o common_dbg_lsan.o
+	${CC} ${CFLAGS_DBG_LSAN} -o membugs_dbg_lsan membugs_dbg_lsan.o common_dbg_lsan.o
 
 # indent- "beautifies" C code into the "Linux kernel style".
 # (cb = C Beautifier :) )
