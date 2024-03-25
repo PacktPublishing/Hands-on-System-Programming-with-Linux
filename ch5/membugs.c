@@ -270,7 +270,7 @@ static void write_overflow_dynmem(void)
 /* test case 2 : out-of-bounds : write overflow [on compile-time memory] */
 static void write_overflow_compilemem(void)
 {
-	int i, arr[5];
+	int i, arr[5], tmp;
 
 	for (i = 0; i <= 5; i++) {
 		arr[i] = 100;	/* Bug: 'arr' overflows on i==5,
