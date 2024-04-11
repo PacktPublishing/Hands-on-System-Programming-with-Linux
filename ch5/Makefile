@@ -39,12 +39,20 @@ LINKIN := -static-libasan
 all: ${ALL}
 # GCC doesn't support MSAN, clang does
 CC := gcc
+LINKIN := -static-libasan
 ifeq (, $(shell which clang))
  $(warning === WARNING! No clang (compiler) in PATH (reqd for MSAN); consider doing 'sudo apt install clang' ===)
 else
  CC := clang
  LINKIN := -static-libsan
 endif
+#---
+# I find that, with valgrind at least, compiling with clang causes valgrind
+# to miss catching several memory bugs - like leakage! With GCC, though, it
+# does seem to catch these bugs. So: lets hardcode to use GCC only
+#---
+CC := gcc
+LINKIN := -static-libasan
 $(info Compiler set to $(CC))
 
 CB_FILES := *.[ch]
