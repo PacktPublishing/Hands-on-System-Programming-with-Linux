@@ -47,9 +47,11 @@ else
  LINKIN := -static-libsan
 endif
 #---
-# I find that, with valgrind at least, compiling with clang causes valgrind
+# I find that, with Valgrind at least, compiling with clang causes Valgrind
 # to miss catching several memory bugs - like leakage! With GCC, though, it
-# does seem to catch these bugs. So: lets hardcode to use GCC only
+# does seem to catch these bugs. So: lets hardcode to use GCC only.
+# Of course, do change this (commenting out the below 2 lines) to test with
+# clang whenever required.
 #---
 CC := gcc
 LINKIN := -static-libasan
