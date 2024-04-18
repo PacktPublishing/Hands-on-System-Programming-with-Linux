@@ -23,7 +23,7 @@
 ## as desired. We have deliberately not kept the sanitizer targets; add
 ## them to the 'ALL := ' statement if you wish to build them by default.
 
-ALL := membugs membugs_dbg membugs_dbg_asan membugs_dbg_ub membugs_dbg_msan membugs_dbg_lsan
+ALL := membugs membugs_dbg membugs_dbg_asan membugs_dbg_ub membugs_dbg_msan membugs_dbg_lsan membugs_dbg_tsan
 
 CFLAGS=-O2 -Wall -UDEBUG
 CFLAGS_DBG=-g -ggdb -gdwarf-4 -O0 -Wall -Wextra -DDEBUG
@@ -31,6 +31,7 @@ CFLAGS_DBG_ASAN=${CFLAGS_DBG} -fsanitize=address -fsanitize-address-use-after-sc
 CFLAGS_DBG_MSAN=${CFLAGS_DBG} -fsanitize=memory -fPIE -pie
 CFLAGS_DBG_UB=${CFLAGS_DBG} -fsanitize=undefined
 CFLAGS_DBG_LSAN=${CFLAGS_DBG} -fsanitize=leak
+CFLAGS_DBG_TSAN=${CFLAGS_DBG} -fsanitize=thread
 
 LINKIN := -static-libasan
  # user will need to explicitly set libraries to link in as required;
@@ -74,6 +75,13 @@ common_dbg_msan.o: ../common.c ../common.h
 common_dbg_lsan.o: ../common.c ../common.h
 	${CC} ${CFLAGS_DBG_LSAN} -c ../common.c -o common_dbg_lsan.o
 
+# ThreadSanitizer (TSan):
+# For clang ver < 18.1.0 (Mar '24), need to set vm.mmap_rnd_bits sysctl to 28 (default is 32)
+# else it bombs on execution (ref: https://stackoverflow.com/a/77856955/779269)
+	sudo sysctl vm.mmap_rnd_bits=28
+common_dbg_tsan.o: ../common.c ../common.h
+	${CC} ${CFLAGS_DBG_TSAN} -c ../common.c -o common_dbg_tsan.o
+
 #--- Target :: membugs
 membugs.o: membugs.c
 	${CC} ${CFLAGS} -c membugs.c -o membugs.o
@@ -111,6 +119,11 @@ membugs_dbg_lsan.o: membugs.c
 	${CC} ${CFLAGS_DBG_LSAN} -c membugs.c -o membugs_dbg_lsan.o
 membugs_dbg_lsan: membugs_dbg_lsan.o common_dbg_lsan.o
 	${CC} ${CFLAGS_DBG_LSAN} -o membugs_dbg_lsan membugs_dbg_lsan.o common_dbg_lsan.o
+
+membugs_dbg_tsan.o: membugs.c
+	${CC} ${CFLAGS_DBG_TSAN} -c membugs.c -o membugs_dbg_tsan.o
+membugs_dbg_tsan: membugs_dbg_tsan.o common_dbg_tsan.o
+	${CC} ${CFLAGS_DBG_TSAN} -o membugs_dbg_tsan membugs_dbg_tsan.o common_dbg_tsan.o
 
 # indent- "beautifies" C code into the "Linux kernel style".
 # (cb = C Beautifier :) )
