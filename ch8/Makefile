@@ -14,7 +14,7 @@ CC=${CROSS_COMPILE}gcc
 CL=${CROSS_COMPILE}clang
 
 CFLAGS=-Wall
-CFLAGS_DBG=-g -ggdb -gdwarf-4 -O0 -Wall -Wextra
+CFLAGS_DBG=-g -ggdb -gdwarf-4 -Og -Wall -Wextra
 CFLAGS_DBG_ASAN= -fsanitize=address
 CFLAGS_DBG_MSAN= -fsanitize=memory -fPIE -pie
 CFLAGS_DBG_UB= -fsanitize=undefined
