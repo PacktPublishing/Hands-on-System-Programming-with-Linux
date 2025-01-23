@@ -36,6 +36,8 @@ show_files_with_caps()
  for ((i=0; i<${#gDirArr[@]}; i++))
  do
 	dir=${gDirArr[${i}]}
+	# Often, /bin & /sbin could be symlinks (to /usr/bin & /usr/sbin); if so, skip 'em
+	[[ -L ${dir} ]] && continue
 	printf "[+] Scanning %-15s ...\n" "${dir}"
 	scanforcaps ${dir}
  done
