@@ -78,7 +78,7 @@ static void usage(char **argv, int stat)
 int main(int argc, char **argv)
 {
 	int opt, ncap;
-	cap_t mycaps = cap_init();
+	cap_t mycaps;
 	cap_value_t caps2set[2];
 
 	if (argc < 2)
@@ -102,7 +102,12 @@ int main(int argc, char **argv)
 	}
 
 	//--- Set the required capabilities in the Thread Eff capset
+	mycaps = cap_init();
 	assert(mycaps != NULL);
+
+	// Prevent the 'LeakSanitizer: detected memory leaks' error from ASAN
+	cap_free(mycaps);
+
 	mycaps = cap_get_proc();
 	if (!mycaps)
 		FATAL("cap_get_proc() for CAP_SETUID failed, aborting...\n");
