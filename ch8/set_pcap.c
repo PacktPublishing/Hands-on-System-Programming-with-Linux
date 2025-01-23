@@ -95,12 +95,10 @@ int main(int argc, char **argv)
 		FATAL("signal() SIGTERM failed, aborting...\n");
 
 	if (!CAP_IS_SUPPORTED(CAP_SETUID))
-		FATAL
-		    ("CAP_SETUID capability not supported on system, aborting...\n");
+		FATAL("CAP_SETUID capability not supported on system, aborting...\n");
 	if (opt == 2) {
 		if (!CAP_IS_SUPPORTED(CAP_SYS_ADMIN))
-			FATAL
-			    ("CAP_SYS_ADMIN capability not supported on system, aborting...\n");
+			FATAL("CAP_SYS_ADMIN capability not supported on system, aborting...\n");
 	}
 
 	//--- Set the required capabilities in the Thread Eff capset
@@ -130,11 +128,9 @@ int main(int argc, char **argv)
 	 */
 	if (opt == 1) {
 		caps2set[0] = CAP_SYS_ADMIN;
-		if (cap_set_flag(mycaps, CAP_EFFECTIVE, 1, caps2set, CAP_CLEAR)
-		    == -1) {
+		if (cap_set_flag(mycaps, CAP_EFFECTIVE, 1, caps2set, CAP_CLEAR) == -1) {
 			cap_free(mycaps);
-			FATAL
-			    ("cap_set_flag(clear CAP_SYS_ADMIN) failed, aborting...\n");
+			FATAL("cap_set_flag(clear CAP_SYS_ADMIN) failed, aborting...\n");
 		}
 	}
 
@@ -147,23 +143,20 @@ int main(int argc, char **argv)
 	 */
 	if (cap_set_proc(mycaps) == -1) {
 		cap_free(mycaps);
-		FATAL
-		    ("cap_set_proc(CAP_SETUID/CAP_SYS_ADMIN) failed, aborting...\n",
+		FATAL("cap_set_proc(CAP_SETUID/CAP_SYS_ADMIN) failed, aborting...\n",
 		     (opt == 1 ? "CAP_SETUID" : "CAP_SETUID,CAP_SYS_ADMIN"));
 	}
 	if (opt == 1)
 		printf("PID %6d now has CAP_SETUID capability.\n", getpid());
 	else if (opt == 2)
-		printf("PID %6d now has CAP_SETUID,CAP_SYS_ADMIN capability.\n",
-		       getpid());
+		printf("PID %6d now has CAP_SETUID,CAP_SYS_ADMIN capability.\n", getpid());
 
 	printf("Pausing #1 ...\n");
 	pause();
 	test_setuid();
 	cap_free(mycaps);
 
-	printf
-	    ("Now dropping all capabilities and reverting to original self...\n");
+	printf("Now dropping all capabilities and reverting to original self...\n");
 	drop_caps_be_normal();
 	test_setuid();
 
